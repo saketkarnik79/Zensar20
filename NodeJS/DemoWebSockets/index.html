@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Client</title>
+</head>
+<body>
+    <h1>Realtime duplex client with Socket.IO</h1>
+
+    <button onclick="sendMessage()">Send Message to Server</button>
+
+    <!-- Load Socket.IO client library from cdn-->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+
+    <script type="text/javascript">
+        const socket = io('http://localhost:3000');
+
+        socket.on('connect', () => {
+            console.log(`Connected to server: ${socket.id}`);
+            //socket.emit('message', 'Hello from the client!');
+        });
+
+        socket.on('server-message', (msg) => {
+            console.log('Received message from server:', msg);
+            alert(`Message from server: ${msg}`);
+        });
+
+        socket.on('disconnect', () => {
+            console.log(`Disconnected from server: ${socket.id}`);
+        });
+        function sendMessage() {
+            const message = prompt('Enter a message to send to the server:');
+            if (message) {
+                socket.emit('client-message', message);
+            }
+        }
+    </script>
+</body>
+</html>
