@@ -1,0 +1,9 @@
+.active {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    text-decoration: underline;
+}

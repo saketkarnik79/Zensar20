@@ -1,0 +1,27 @@
+<p>property-binding-demo works!</p>
+
+<h1 [innerText]="title"></h1>
+<h2>Demo</h2>
+<button [disabled]="isDisabled">I am a disabled button component.</button>
+<h3 [innerHtml]="someHtml"></h3>
+
+<!-- Single class binding demo -->
+<p [class.active] = "isActive">This text is active if 'isActive' is set to true.</p>
+
+<!-- Multiple class binding demo -->
+<p [class.active] = "isActive" [class.error] = "hasError">
+    This text can be active and/or error based on conditions.
+</p>
+
+<!-- Toggle buttons -->
+<button (click)="toggleIsActive()" >Toggle Active</button>
+<button (click)="toggleError()" >Toggle Error</button>
+
+<!--Style Demo -->
+<h2 [style.color] = "textColor" [style.font-size.px]="fontSize">This text has dynamic styles!</h2>
+<!-- Multiple styles using [style] binding -->
+<p [style] = "{'background-color': isHighlighted ? 'yellow' : 'transparent', 'padding.px' : 10}">
+    Background changes when you click the button.
+</p>
+<!-- Button for toggle -->
+<button (click) = "toggleHighlight()">Toggle highlight</button>

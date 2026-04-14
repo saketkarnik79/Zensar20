@@ -1,0 +1,5 @@
+<p>two-way-data-binding-demo2 works!</p>
+<h1>{{title}}</h1>
+<input type="text" name="name" placeholder="Enter your name" [(ngModel)] = "name" />
+<p>You entered: {{name}}</p>
+<button (click) = "clearName()" >Clear Name</button>

@@ -1,0 +1,5 @@
+<p>two-way-data-binding-demo works!</p>
+<h2>{{title}}</h2>
+<input type="text" [value] = "name" (input) = "name = $event.target.value" placeholder="Enter your name" />
+<p>You entered: {{name}}</p>
+<button (click) = "clearName()">Clear Name</button>

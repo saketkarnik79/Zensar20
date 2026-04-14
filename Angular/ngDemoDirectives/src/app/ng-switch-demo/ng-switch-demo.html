@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        ngSwitch Demo
+    </div>
+    <div class="card-body">
+        Input String: <input type="number" [(ngModel)]="num" placeholder="Enter a number"/>
+        <!-- <div [ngSwitch]="num">
+            <div *ngSwitchCase="1">One</div>
+            <div *ngSwitchCase="2">Two</div>
+            <div *ngSwitchCase="3">Three</div>
+            <div *ngSwitchCase="4">Four</div>
+            <div *ngSwitchCase="5">Five</div>
+            <div *ngSwitchCase="6">Six</div>
+            <div *ngSwitchCase="7">Seven</div>
+            <div *ngSwitchDefault>This is default case</div>
+        </div> -->
+        @switch (num) {
+            @case (1) { <div>One</div> }
+            @case (2) { <div>Two</div> }
+            @case (3) { <div>Three</div> }
+            @case (4) { <div>Four</div> }
+            @case (5) { <div>Five</div> }
+            @case (6) { <div>Six</div> }
+            @case (7) { <div>Seven</div> }
+            @default { <div>This is default case</div> }
+        }
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<h2>Customers List</h2>
+<hr/>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (customer of customers; track customer.customerID) {
+            <tr>
+                <td>{{customer.customerID}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.address}}</td>
+                <td>{{customer.city}}</td>
+                <td>{{customer.state}}</td>
+            </tr>
+        }
+    </tbody>
+</table>

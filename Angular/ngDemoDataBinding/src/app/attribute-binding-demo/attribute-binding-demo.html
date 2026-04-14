@@ -1,0 +1,19 @@
+<p>attribute-binding-demo works!</p>
+<table [attr.border] = "tableBorder">
+    <tr>
+        <td [attr.colspan]="colSpanValue">
+            This cell spans {{colSpanValue}} columns.
+        </td>
+    </tr>
+    <tr>
+        <td>Column 1</td>
+        <td>Column 2</td>
+    </tr>
+</table>
+<br/>
+<!-- Attribute binding for image attributes -->
+<img [attr.src] = "imageUrl" [attr.alt] = "ariaLabelText" [attr.width] = "150" [attr.height] = "150" />
+<br/>
+<br/>
+<!-- Attribute binding for accessibility -->
+<button [attr.aria-label] = "ariaLabelText" >Click me!</button>

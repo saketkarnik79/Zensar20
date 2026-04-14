@@ -1,2 +1,17 @@
 <h1>This is Root Component!</h1>
-<app-template-expression-demo></app-template-expression-demo>
+<hr/>
+<!-- <app-template-expression-demo></app-template-expression-demo>
+<hr/>
+<app-property-binding-demo></app-property-binding-demo>
+<hr/>
+<app-attribute-binding-demo></app-attribute-binding-demo>
+<hr/> -->
+<!-- <app-two-way-data-binding-demo></app-two-way-data-binding-demo>
+<hr/> -->
+<!-- <app-two-way-data-binding-demo2></app-two-way-data-binding-demo2>
+<hr/> -->
+<app-two-way-data-binding-demo3 [(count)]="counter"></app-two-way-data-binding-demo3>
+<button (click)="clearCount()">Clear Counter</button>
+<hr/>
+
+<router-outlet></router-outlet>

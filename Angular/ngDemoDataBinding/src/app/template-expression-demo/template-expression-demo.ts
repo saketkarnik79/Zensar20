@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './template-expression-demo.css',
 })
 export class TemplateExpressionDemo {
-  firstName = 'John';
-  lastName = 'Doe';
-  age = 30;
-  isLoggedIn = true;
+   firstName: string = 'John' ;
+   lastName: string = 'Doe';
+   age: number = 35;
+   isLoggedIn: boolean = true;
 }

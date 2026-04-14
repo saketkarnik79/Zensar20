@@ -1,0 +1,18 @@
+<p>
+    Visible: {{visible}}
+</p>
+<!-- <p *ngIf="visible; else elseBlock">
+    Content to render, when the value of 'visible' is true.
+</p> -->
+@if (visible) {
+    <p>
+        Content to render, when the value of 'visible' is true.
+    </p>
+} @else {
+    <p>
+        Content to render, when the value of 'visible' is false.
+    </p>
+}
+<ng-template #elseBlock>
+    Content to render, when the value of 'visible' is false.
+</ng-template>
