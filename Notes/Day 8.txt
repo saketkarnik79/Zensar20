@@ -68,3 +68,112 @@ this.router.navigate([
     }
   }
 ]);
+
+React JS
+	Fundamentals
+		What is ReactJS?
+			React os like SQL for HTML or more specifically the DOM.
+			It is a JavaScript library for building user interfaces. It provides a declarative library that keeps the DOM in sync with you code. It makes ir painless to create UIs on top of web standards.
+		Why ReactJS?
+			It is one of the most popular JavaScript libraries currently and it focuses on speedy rendering compared to the othe JavaScript libraries & frameworks with the help of Virtual DOM.
+		Companies that use ReactJS
+			Facebook
+			Netflix
+			Uber
+			Twitter(Now X)
+			Pinterest
+			Airbnb
+			Instagram
+			reddit
+			Instacart
+			Microsoft
+			and more.
+			
+			React is easy to learn with very lo concepts count.
+			Ecosystem & Community
+			Timeless Technology
+		Comparison with Angular & VueJS
+		ReactJS Architecture
+			Where to Render?
+				There are three place to Render?
+					1. Server Side Rendering (SSR)
+						Java Spring, ASP.NET, Ruby on Rails, PHP, Python
+					2. Client Side Rendering (CSR) used mainly for SPAs
+						React, Angular, Vue, AngularJS, Ember, Backbone
+					3. Static Site Generation(SSG)
+		Environment Setup
+		ReactJS Elements
+		JSX/TSX
+		React Virtual DOM
+		React Components
+		React Project Setup
+		
+		Props
+			Short form for properties. This is used when Parent component want to send data to Child Component.
+		PropTypes (more important when coding with javascript)
+			Data type information for Props.
+		Lists in React
+			function FruitList(props) {
+			  const fruitListItems = props.fruits.map((fruit) => (
+				<li key={fruit.id}>{fruit.name}</li>
+			  ));
+			  return <ul>{fruitListItems}</ul>;
+			}
+
+			const data = [
+			  { id: 1, name: 'apple' },
+			  { id: 2, name: 'orange' },
+			  { id: 3, name: 'blueberry' },
+			  { id: 4, name: 'banana' },
+			  { id: 5, name: 'kiwi' },
+			];
+
+			ReactDOM.createRoot(document.getElementById('root')).render(
+			  <FruitList fruits={data} />
+			);
+
+			function FruitListItem(props) {
+			  return <li key="{props.fruit.id}">{props.fruit.name}</li>;
+			}
+
+			function FruitList(props) {
+			  const fruitListItems = props.fruits.map((fruit) => (
+				<FruitListItem key={fruit.id} fruit={fruit} />
+			  ));
+			  return <ul>{fruitListItems}</ul>;
+			}
+
+			const data = [
+			  { id: 1, name: 'apple' },
+			  { id: 2, name: 'orange' },
+			  { id: 3, name: 'blueberry' },
+			  { id: 4, name: 'banana' },
+			  { id: 5, name: 'kiwi' },
+			];
+
+			ReactDOM.createRoot(document.getElementById('root')).render(
+			  <FruitList fruits={data} />
+			);
+			
+		Events in React
+			<div id="root">
+			  <button onclick="handleClick()">Click Me!</button>
+			</div>
+			
+			//main.js
+			function handleClick() {
+			  console.log('clicked');
+			}
+			
+			function handleClick(e, p) {
+				console.log(e);
+			  console.log('clicked'+p);
+			}
+
+			function Button() {
+			  return <button onClick={handleClick(34)}>Click Me!</button>;
+			}
+
+			ReactDOM.createRoot(document.getElementById('root')).render(<Button />);
+			
+		Synthetic Events
