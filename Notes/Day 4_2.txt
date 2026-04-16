@@ -1,0 +1,295 @@
+Authentication and authorization
+	What is authentication?
+		It is all about "Who are you?".
+	What is authorization?
+		It is about "What are you allowed to do?"
+	Why is Authentication needed?
+		It allows:
+			Persistent login
+			Personalized Content
+			Secure the access to the resources
+	Common authentication approaches:
+	Method							Used for
+	Sessions+Cookies				Traditional web apps
+	JWT(JSON Web Token)				APIs, SPAs
+	OAuth(Google, Microsoft, etc.)	Social Login
+	
+	Authentication using Sessions+Cookies
+		Basic Login Flow
+			User submits login form
+			  ↓
+			Server verifies credentials
+			  ↓
+			Session created
+			  ↓
+			Session ID stored in cookie
+			  ↓
+			User authenticated
+			
+Types of errors in Express Applications
+	Operational Errors
+		Input input
+		Unauthorized access
+		Resource not found
+		Database failure
+	Programmer Errors(Bugs)
+		Undefined variables
+		Logical mistakes
+		Crashes
+		
+	app.use((err, req, res, next) => {
+	  console.error(err.stack);
+
+	  res.status(500).send('Something went wrong!');
+	});
+	
+	app.get('/sync-error', (req, res) => {
+	  throw new Error('Something broke');
+	});
+	
+	app.get('/manual-error', (req, res, next) => {
+	  const err = new Error('Manual error');
+	  err.statusCode = 400;
+	  next(err);
+	});
+	
+	class AppError extends Error {
+	  constructor(message, statusCode) {
+		super(message);
+		this.statusCode = statusCode;
+	  }
+	}
+
+	module.exports = AppError;
+	
+	const AppError = require('./AppError');
+
+	app.get('/users/:id', (req, res, next) => {
+	  if (req.params.id !== '1') {
+		return next(new AppError('User not found', 404));
+	  }
+	  res.send('User found');
+	});
+	
+	app.use((req, res, next) => {
+	  res.status(404).send('Route not found');
+	});
+	
+	const protect = (req, res, next) => {
+	  if (!req.session.user) {
+		const err = new Error('Not authenticated');
+		err.statusCode = 401;
+		return next(err);
+	  }
+	  next();
+	};
+	
+	app.get('/dashboard', protect, (req, res) => {
+	  res.send('Dashboard');
+	});
+	
+REST semantics
+	What does REST mean?
+		REST=>REpresentational State Transfer
+		It is about how the resources are identified, manipulated, and represented over HTTP using standard semantics.
+	What are "Semantics" in REST?
+		Semantics = meaning
+		These define:
+			What an URl/URI means?
+			What an HTTP method means?
+			What a status code means?
+			What a response body represents?
+	What are Resources in REST?
+		In REST, everything is a resource.
+			e.g.
+				User
+				Order
+				Product
+				Invoice
+				
+		Each resource is identified by an unique URL.
+			/users
+			/users/10
+			/orders
+			/order/101
+			/products
+			/products/234
+		URLs identify things, not actions.
+	Correct use of HTTP methods
+		Method			Semantic Meaning
+		GET				Retrieve a resource
+		POST			Create a new resource
+		PUT				Replace a resource
+		PATCH			Partial update
+		DELETE			Remove a resource
+	e.g.
+		GET /users/10        → Get user 10
+		POST /users          → Create a user
+		PUT /users/10        → Replace user 10
+		PATCH /users/10      → Update part of user 10
+		DELETE /users/10     → Delete user 10
+		
+		GET /createUser
+		POST /deleteUser
+		POST /getUsers
+	Resource Heirarchy (Relationships)
+		RESt expresses relationships through URL structure.
+			e.g.
+				/users/10/orders
+	Idempotency
+		Calling the same request multiple times has exactly the same effect.
+	Wht REST semantics do matter?
+		Predictability
+		Interoperability
+		Caching support
+		Tooling compatibility
+		Easier client development
+
+app.get('/users/:id', getUser);
+app.post('/users', createUser);
+app.put('/users/:id', replaceUser);
+app.patch('/users/:id', updateUser);
+app.delete('/users/:id', deleteUser);
+
+1. Model
+2. DAL
+3. Biz Layer (optional)
+4. Controller
+5. Global Error Handler Middleware (Optional)
+6. Routes
+7. App
+
+Nodejs performance bottlenecks and performance optimization
+	NodeJS is fast when it does non-blocking I/O & slow when you block the event loop.
+	Single-threaded model (main event loop)
+	Excellent at I/O
+	Bad at CPU-heavy workload on the main thread.
+	Hence, most of the performance issues com from blocking the event loop or inefficient usage of resources.
+	Major performance bottleneck categories
+		Event loop blocking
+		CPU-bound work
+		Inefficient I/O
+		Memory leaks & GC pressure
+		Database inefficiencies
+		Poor concurrency & scaling
+		Bad express pattern
+	
+	Event loop blocking
+		app.get('/slow', (req, res) => {
+		  const start = Date.now();
+		  while (Date.now() - start < 5000) {} // blocks event loop
+		  res.send('Done');
+		});
+		
+		Every user waits
+		Server appears "hung"
+		
+		Optimization Options
+			Avoid long loops
+			Break work into async chunks
+			Use background workers
+		setImmediate(() => {
+		   non-blocking continuation
+		});
+		
+	CPU-bound work(Hashing, Encryption, JSON, Loops)
+		Common CPU Bottlenecks
+			Password hashing (bcrypt)
+			Large JSON/XML serialization
+			Data Aggregation
+			Image Processing
+		bcrypt.hashSync(password, 10); // blocks
+		
+		Optimization Options
+			Use async APIs
+				await bcrypt.hash(password, 10);
+			Offload the tasks to worker threads
+				const { Worker } = require('worker_threads');
+			Move to separate services (best for scaling)
+		
+		Inefficient I/O (File system Performance bottlenecks)
+			Common mistakes:
+				Sync fs
+					fs.readFileSync('big.json');
+					Blocks event loop
+			
+			Optimization Options
+				Async
+				Stream
+					fs.createReadStream('big.json').pipe(res);
+			Constant memory
+			Handling backpressure automatically
+		
+		Database inefficiencies/bottlenecks
+			Common Problems
+				Missing Indexes
+				N + 1 queries
+				Fetching unnecessary fields
+				Large result sets
+			
+			Optimization Options
+				Using Indexes
+				Limit fields
+				Pagination
+				Avoid N + 1 queries
+				
+		Memory leaks & GC pressure
+			Common Issues
+				Global arrays growing
+				Caches without eviction
+				Event Listeners not removed
+				Holding large buffers
+				
+					const cache = []; // ❌ unbounded
+					
+			Optimization Options
+				Remove Listeners
+				Stream data
+				Monitoring Memory (process.memoryUsage())
+				Use distributed caches
+		
+		Bad expressjs pattern
+			Heavy middleware on every request
+			Too much logic in routes
+			Large JSON responses
+				res.json(hugeObject);
+		
+			Optimization Options
+				Optimize the middleware usage
+					app.get('/public', handler);
+					app.use('/private', auth, privateRoutes);
+				Move logic to services
+				Reduce the payload size
+				Use Pagination
+				Use compression					
+					npm install compression
+					app.use(compression());
+		
+		Network & HTTP Bottlenecks
+		
+		Scaling NodeJS(Beyond One Core)
+			NodeJS uses only one CPU core
+			
+			Solution 1: Cluster Module
+			Solution 2: Horizontal Scaling
+		
+		Socket.IO & Real-Time Performance Issues
+			Too many open connections
+			Broadcasting to all clients
+			Memory leaks on disconnect
+			
+	Debugging Node Applications
+	O	Node Inspector
+		What is Node inspector?
+			It is NodeJS's buil-in debugging mechanism based on the Chrome DevTools protocol.
+			
+			It allows you to:
+				Pause code execution
+				Set breakpoints
+				Inspect variables & scopes
+				Step through the code
+				Profile CPU & memory
+				
+			Modern NodeJS use VB Inspector.
+			
+			node --inspect app.js

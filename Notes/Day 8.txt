@@ -1,0 +1,70 @@
+Angular Router/Routing
+	What is Angular Routing?
+		Routing allows us to move from one part of the application to another part or one View to another View.
+	What is Angular Router?
+		The Router is separate module in Angular. It is in it's own dedicated library/package '@angular/router'
+	By using Angular Router you can:
+		Navigate to a specific view by typing an URL in the address bar.
+		Pass optional parameters(query parameters) to the view.
+		Bind clickable elements to the view and load the view when the user performs various application tasks.
+		Handle back & forward buttons of the browser.
+		Allows you to load the view dynamically.
+		Protect the routes from unauthorized users using Route Guards.
+	Components of Angular Router
+		Router - A service that enables navigation from one component to the next component as users perform application tasks.
+		Route - Tells Angular Router which view to display when user clicks a link or pastes a url into the browser address bar. Every route consists of 'path' and 'component'.
+		Routes - an array of Route objects.
+		RouterOutlet - a directive that serves as a placeholder, where Router should display the view.
+		RouterLink - A directive that binds the HTML element to a Route.
+		RouterLinkActive - A directive for adding or removing classes from an html element that is bound to a RouterLink.
+		ActivedRoute - An object that represents the currenctly activated route associated with the loaded component.
+		RouterState - The current state of the router includes a tree of the currently activated routes together with convinience methods for traversing the route tree.
+		RouteLink Paramerters array - The parameters to the Route.
+		
+<!-- app.component.html -->
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+
+<!-- dashboard.component.html -->
+<div class="sidebar"></div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+
+const routes: Routes = [
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      { path: 'reports', component: ReportsComponent },
+      { path: 'settings', component: SettingsComponent }
+    ]
+  }
+];
+
+
+<router-outlet></router-outlet>
+<router-outlet name="sidebar"></router-outlet>
+
+const routes: Routes = [
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      { path: 'main', component: MainContentComponent },
+      { path: 'menu', component: SidebarComponent, outlet: 'sidebar' }
+    ]
+  }
+];
+
+this.router.navigate([
+  {
+    outlets: {
+      primary: ['dashboard', 'main'],
+      sidebar: ['dashboard', 'menu']
+    }
+  }
+]);

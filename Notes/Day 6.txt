@@ -1,0 +1,64 @@
+Directives
+	What are directive?
+		They help us to manipulate the DOM and also help us to extend the core HTML behavior.
+	How many types of Directives are there in Angular?
+		There are three types of Directives in Angular:
+			Component Directives - These are the directives with a template.
+			Structural Directives - These can change the DOM layout by adding & remiving FOM elements.
+				ngFor
+				ngIf
+				ngSwitch
+			Attribute Directives - These can change the appearance or behavior of an element.
+				ngModel
+				ngClass
+					cssVar: string = 'primary big';
+					cssArray = ['primary', 'big'];
+					cssClass = {
+						primary: true,
+						big: true,
+					};
+					
+					<b>Example 5: Value comming from the component method</b> <br />
+					  <b>Example 5A (string)</b> <br />
+					  <div [ngClass]="cssVar">Sample Text</div>
+
+					  <b>Example 5B (array)</b> <br />
+					  <div [ngClass]="cssArray">Sample Text</div>
+
+					  <b>Example 5C (Object)</b> <br />
+					  <div [ngClass]="cssClass">Sample Text</div>
+					  
+					  
+					numbers = [30, 40, 50, 60, 70, 80];
+					  getClass(num) {
+						if (num <= 50) return 'primary';
+						else return 'secondary';
+					  }
+					  
+					<ul>
+						<li *ngFor="let num of numbers">
+						  <div [ngClass]="getClass(num)">{{ num }}</div>
+						</li>
+					</ul>
+					
+					<ul>
+						<li *ngFor="let num of numbers">
+						  <div [ngClass]="{ primary: num <= 50, secondary: num > 50 }">
+							{{ num }}
+						  </div>
+						</li>
+				    </ul>
+					
+				ngStyle
+					<element [ngStyle]="{'styleNames': styleExp}">...</element>
+					<some-element [ngStyle]="{'font-size': '20px'}">Set Font size to 20px</some-element>
+					
+					color: string= 'red';
+					size: number =12;
+					
+					<input [(ngModel)]="color" /> 
+					<div [ngStyle]="{'color': color, 'font-size': size}">Change my color</div>
+			Custom Directives
+			
+Pipes
+	Expression | pipeOperator[:pipeArguments]

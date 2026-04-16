@@ -1,0 +1,85 @@
+class AppError extends Error {
+  constructor(message, statusCode) {
+    super(message);
+    this.statusCode = statusCode;
+    this.isOperational = true;
+  }
+}
+
+module.exports = AppError;
+
+const AppError = require('../errors/AppError');
+
+function findUser(id) {
+  if (!id) {
+    throw new AppError('User not found', 404);
+  }
+  return { id, name: 'Saket' };
+}
+
+module.exports = { findUser };
+
+
+Best Practices for error handling
+	Use custom error classes
+	Handle errors once, centrally
+	Never expose stack traces to users
+	Always log errors
+	Fail fast on unhandled exceptions
+	Use async/await + centralized middleware
+
+Best practices for Events
+	Emit events, don’t call dependencies directly
+	Keep listeners small and fast
+	Name events clearly (user:created)
+	Always handle error events
+	Remove unused listeners
+	Prefer events for:
+		Notifications
+		Logging
+		Streaming
+		State changes
+		
+Events not to be used when:
+	Request-response logic
+	Single-result operations
+	Heavy computation
+	Complex flow control
+	
+const http = require('http');
+const fs = require('fs');
+
+http.createServer((req, res) => {
+  fs.createReadStream('video.mp4').pipe(res);
+}).listen(3000);
+
+
+Process
+	A process is an instance of a running program.
+	In NodeJS:
+		Each running NodeJS App = One Process
+		Process gives access to:
+			Environment Variables
+			Command-Line arguments
+			Process lifecycle
+			Signals
+			Exit codes
+			Memory & CPU information
+		Available everywhere globally in the overall NodeJS program
+		No require() needed
+		
+		e.g. console.log(process.pid);
+		
+		The process object allows us to:
+			Communicate with the OS.
+			Control how our app starts & exits.
+			Handles the crashes safely.
+			Build production-grade apps.
+			
+
+const entries = await fs.readdir('./logs', { withFileTypes: true });
+
+entries.forEach(entry => {
+  if (entry.isDirectory()) console.log('DIR:', entry.name);
+  else console.log('FILE:', entry.name);
+});

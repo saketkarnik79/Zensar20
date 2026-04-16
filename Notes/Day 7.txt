@@ -1,0 +1,32 @@
+Signals
+	What are Signals?
+		Signals in Angular are a new reactivity model to make state management more predictable & efficient. They provide a way to declare reactive values that automatically notify consumers when they change.
+Component Life Cycle Hook
+	What are Component Life Cycle Hooks?
+		Angular lets us know when these events happen using the lifecycle hooks.
+	Angular Lifecycle Hooks
+		ngOnInit - Angular raises ngOnInit hook after it creates the component & updates its input properties for the first time. It is raised after the ngOnChanges hook.
+		ngOnChanges - Angular invokes the ngOnChanges hook whenever any data-bound input property of the component or directive changes
+		ngDoCheck - Angular invokes ngDocheck hook event during every change detection cycle.
+		ngAfterContentInit - Angular invokes ngAfterContentInit hook after the component's projected content has been fully initialized.
+		ngAfterContentChecked - Angular invokes ngAfterContentChecked hook during every change detection cycle after Angular finishes checking of component's projected content
+		ngAfterViewInit - Angular invokes ngAfterViewInit hook after the component's view & all of its child views are fully initialized.
+		ngAfterViewChecked - Angular invokes ngAfterViewChecked hook after it checks & updates the component's views & child views.
+		ngOnDestroy - Angular invokes ngOnDestroy hook just before the Component/Directive instance is destroyed by Angular.
+		
+Angular Forms
+	Template-Driven Forms
+		What is Template-Driven Form?
+			In Template-Driven Form we specify behaviors/validations using directives & attributes in our template & let it work behind the scenes.
+		The Template-Driven Form:
+			The form is set up using ngForm directive
+			Controls are setup using the ngModel directive
+			ngModel also provides the two-way data binding
+			The validations are configured in the template via directives.
+	Reactive Forms(Model-Driven Forms/Typed Forms)
+		What are reactive Forms?
+			Reactive Forms are forms where we define the structure of the form in the component class with the help of the classes like 'FormGroup', 'Form Control', 'FormArray', etc.
+
+Services & Dependency Injection
+	What is an Angular Service?
+		Service is a piece of reusable code with a focused purpose.

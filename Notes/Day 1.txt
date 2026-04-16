@@ -1,0 +1,222 @@
+Introduction to NodeJs
+	What is NodeJS?
+		It is an open-source, cross-platform JavaScript runtime environment that allows us to run JavaScript outside the browser, primarily on the server side.
+	
+		Notes:
+			NodeJS is not a framework.
+			NodeJS is not a programming language either.
+			NodeJS is just a runtime built on Google's V8 JavaScript engine.
+		Why NodeJS was primarily created?
+			It was built in 2009 to solve performance issues in existing traditional web servers.
+			Traditional server models
+				Each request creates/allocates a new thread.
+				Threads consume memory.
+				Poor scalability under heavy load.
+			How NodeJS solves this problem?
+				Uses event-driven, non-blocking I/O.
+				Runs single-threaded but still handles thousands of clients efficiently.
+				Event loop takes responsibility for it.
+				Ideal for real-time & scalable application.
+			Key goal of NodeJS:
+				Handle many concurrent connections with minimal resources.
+			Key features of NodeJS
+				Single Threaded & Event-Driven Architecture
+				Non-Blocking I/O
+				Fast Execution
+				Highly Scalable
+				Cross-Platform
+			Core components of NodeJS:
+				V8 engine
+				Event Loop
+				Libuv
+				Node API
+			NodeJS Modules
+				fs
+				http
+				path
+				events
+				
+				Custom Modules
+				Third-party Modules(npm)
+			Popular NodeJS Frameworks
+				ExpressJS
+				NestJS
+				Fastify
+			Common Use Case of NodeJS
+				REST APIs
+				Real-time chat applications
+				Streaming services
+				Microservices
+				IoT backends
+				Single Page Applications(SPAs) backends
+			Companies that are using NodeJS
+				Netflix
+				PayPal
+				LinkedIn
+				Uber
+				eBay
+			Advantages of NodeJS
+				One language for frontend & backend
+				Huge ecosystem (NPM)
+				High Performance
+				Scalable
+				Active community
+			Limitations of NodeJS
+				Not good for CPU-intensive tasks
+				Single-threaded (needs clustering for very heavy workloads)
+				Call hell(mostly solved using async/await)
+			When should we use NodeJS?
+				If:
+					we need high concurrency
+					our app is I/O heavy
+					we want real-time features
+					we prefer JavaScript everywhere
+			When to avoid NodeJS?
+				If:
+					our app is CPU-intensive.
+					we need heavy computation.
+	Node’s Event Loop
+		Core Components Involved
+			Call Stack (Execution Thread)
+				function first() {
+				  second();
+				}
+
+				function second() {
+				  console.log("Hello");
+				}
+
+				first();
+				
+				setTimeout(() => {
+				  console.log("Timer done");
+				}, 1000);
+			Web APIs/ Node APIs
+			Task Queues
+			Event Loop
+		Event Loop Phases
+			Main Phases
+				Timers Phase
+				I/O Phase
+				Check Phase
+				Close Callbacks Phase
+				
+	Alternatives to Node.js
+		Django
+		FastAPI
+		Spring Boot
+		Go(GoLang)
+		ASP.NET Core (C#)
+		Rust+Actix/Axum
+		Laravel
+		Ruby On Rails
+		Deno
+		Bun
+		
+	Writing asynchronous code
+		function wait() {
+		  const start = Date.now();
+		  while (Date.now() - start < 2000) {}
+		}
+
+		console.log("Start");
+		wait();
+		console.log("End");
+		
+		
+		const fs = require("fs");
+
+		console.log("Start");
+
+		fs.readFile("data.txt", "utf8", (err, data) => {
+		  if (err) {
+			console.error("Error:", err);
+			return;
+		  }
+		  console.log("File content:", data);
+		});
+
+		console.log("End");
+		
+		
+		getUser(id, (user) => {
+		  getOrders(user, (orders) => {
+			getPayments(orders, (payments) => {
+			  console.log(payments);
+			});
+		  });
+		});
+		
+		
+		function readFileAsync(path) {
+		  return new Promise((resolve, reject) => {
+			require("fs").readFile(path, "utf8", (err, data) => {
+			  if (err) reject(err);
+			  else resolve(data);
+			});
+		  });
+		}
+		
+		
+		console.log("Start");
+
+		readFileAsync("data.txt")
+		  .then((data) => {
+			console.log("File:", data);
+		  })
+		  .catch((err) => {
+			console.error("Error:", err);
+		  });
+
+		console.log("End");
+		
+		
+		getUserById(1)
+		  .then(user => getOrders(user.id))
+		  .then(orders => getPayments(orders))
+		  .then(payments => console.log(payments))
+		  .catch(err => console.error(err));
+		  
+		  
+		  
+		async function processUser(id) {
+		  try {
+			const user = await getUserById(id);
+			const orders = await getOrders(user.id);
+			const payments = await getPayments(orders);
+			console.log(payments);
+		  } catch (err) {
+			console.error("Error:", err);
+		  }
+		}
+
+		processUser(1);
+		
+		
+		async function getPost() {
+		  const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+		  const data = await response.json();
+		  console.log(data);
+		}
+
+		getPost();
+		
+	Modules
+		const fs = require("fs");
+		
+		import fs from "fs";
+		
+		Why Built-in Modules do Matter?
+			They allow NodeJS to:
+				Interact with file system.
+				Create http servers.
+				Work with paths, os & processes.
+				Handle streams, buffers, events.
+				Do networking, cryptography, compression.
+		Categories of Built-in Modules
+			File & OS Handling
+			Networking & servers
+			Asynchronous Utilities
+			Data & Streams
+			System & Process
+			Security & Performance

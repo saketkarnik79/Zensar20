@@ -1,0 +1,119 @@
+Angular
+	•	What is Angular?
+		It is a JavaScript Framework based development platform for building single page applications (SPAs) for desktop & mobile. It is written using TypeScript. It comes with every feature that you need to develop a complex & sophistacetd web/mobile application. It is loaded with some core features like components, directives, Forms, pipes, HTTP services, dependency injection, etc.
+	•	Getting Started With Angular
+		NodeJS v20
+		npm latest version
+		angular cli
+	Features of Angular
+		Modular by design
+		Component-based structure
+		Templates
+		Two-way data binding
+		Dependency Injection
+		Routing
+		Angular Forms
+			Template Driven Forms
+			Reactive Forms
+		Standalone Applications(Module Driven Apps)
+		HTTP Module(For interacting with backend server over http(mostly RESTful services))
+		Testing
+		Active Community
+	Key differences between AngularJS & Angular
+		Support for ES6
+		Components are new controllers
+			//AngularJS Controllers
+			//View 
+				<body ng-controller=’appController’>     
+					<h1>vm.message<h1> 
+				</body> 
+
+				//Controller angular.module(‘app’).controller(‘appController’,appcontroller) {     
+					message=’Hello Angular’; 
+				}
+			
+			//Angular Components
+			import { Component } from '@angular/core'; 
+
+			@Component({     
+				selector: 'app',     
+				template: '<h1>{{message}} </h1>' 
+			}) 
+			export class AppComponent  {
+				  message: string=’Hello Angular’; 
+			}
+		
+		Directives
+			//Angular JS
+				<ul>     
+					<li ng-repeat =customer in vm.customers> 
+						{{customer.name}}     
+					</li> 
+				</ul> 
+				<div ng-if=”vm.isVIP”>     
+					<h3> VIP Customer </h3> 
+				</div>
+			
+			Angular
+				<ul>     
+					<li *ngFor =#customer of customers>         
+						{{customer.name}}     
+					</li> 
+				</ul> 
+				<div *ngIf=”vm.isVIP”> 
+					<h3> VIP Customer </h3> 
+				</div>
+				
+				@Directive({     
+				   selector: '[MyDirective]' 
+				}) 
+				class MyDirective { }
+			
+			Data Bindings
+				Interpolation
+					//AngularJS   
+						<h3> {{vm.customer.Name}}</h3>  
+
+					//Angular 
+						<h3> {{customer.Name}}</h3>
+				One-Way Binding
+					//AngularJS 
+						<h3 ng-bind=vm.customer.name></h3> 
+
+					//Angular 
+						<h3 [innerText]=”customer.name” ></h3>
+				Event Binding
+					//AngularJS 
+						<button ng-click=”vm.save()”>Save<button>  
+
+					//Angular 
+						<button (click)=”save()”>Save<button> 
+				Two-way Binding
+					//AngularJS 
+						<input ng-model=”vm.customer.name”>  
+
+					//Angular 
+					<input [(ng-model)]=”customer.name”> 
+				$scopes are not available in Angular
+				Filters in AngularJS have been renamed to Pipes in Angular
+					//AngularJS
+						<td>{{vm.customer.name | uppercase}}</td> 
+					//Angular
+						<td>{{customer.name | uppercase}}</td>
+				Platform-specific Bootstrap
+					In AngularJS, we used the ng-app directive in out HTML for bootstrapping the AngularJS framework and our app.
+						<body ng-app=’app’> </html> 
+					In Angular, the bootstrapping is done through code.
+						import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'; 
+						import {AppModule } from './app.module'; platformBrowserDynamic().bootstrapModule(AppModule);
+				Services
+					In AngularJS, we had services, Factories, Providers, Constants, values, which we used to create reusable & loosely coupled code.
+					In Angular, everything mentioned above has been merged into a Service class.
+				AngularJS was built without mobile support whereas Angular is designed with mobile first approach.
+				
+
+	What is an Angular component?
+		It is the main building block of an Angular application that containsa data & user interaction logic that defines how the View looks & behaves. Angular refers to views as Templates(HTML). These components are simple JavaScript classes defined using the @Component Decorator. This Decorator provides the component with a View to display & Metdata about the component.
+	
+	Template
+		Welcome, {{firstName}} {{lastName}}

@@ -1,0 +1,104 @@
+GET /users?id=10 HTTP/1.1
+Host: example.com
+
+Types of HTTP Requests
+	GET
+	POST
+	PUT
+	DELETE
+	MERGE
+	OPTIONS
+
+The server:
+	Receives the request
+	Processes it
+	Returns a response
+	
+
+Client (Browser / App)
+          │
+          │ HTTP Request
+          ▼
+Node.js Server
+   ├─ Parse request
+   ├─ Read headers
+   ├─ Read body (stream + buffer)
+   ├─ Execute business logic
+   └─ Send response
+          ▲
+          │ HTTP Response
+Client
+
+Client -> -> Server
+	   <- <-
+(always open)
+
+
+Browser / Client
+     ↕ (events)
+Socket.IO Client
+     ↕
+Socket.IO Server
+     ↕
+Node.js Event Loop
+
+
+app.get('/data', async (req, res, next) => {
+  try {
+    const data = await fetchData();
+    res.json(data);
+  } catch (err) {
+    next(err);
+  }
+});
+
+
+Incoming HTTP request
+      ↓
+Express middleware stack
+      ↓
+Route matched
+      ↓
+Business logic
+      ↓
+Response serialization
+      ↓
+HTTP response sent
+
+
+app.post(
+  '/data',
+  validateInput,
+  authenticateUser,
+  saveToDatabase,
+  (req, res) => {
+    res.send('Done');
+  }
+);
+
+app.get('/login', loginHandler);
+app.use(auth);
+
+
+Why Cookies & Sessions needed?
+	HTTP is stateless.
+	Which means:
+		Request 1 => Server forgets everything.
+		Request 2 => Server forgets everything once again.
+
+Concept			Cookies						Sessions
+Stored on		Client(browser)				Server
+Size			Small(not more that 4KB)	Large
+Security		Less Secure					More secure
+Data Type		Plain data					Any JS Object
+Common Use		Preferences					Authentication
+
+What is a Cookie?
+	A cookie is a small key-value pair stored in the user's browser.
+		e.g. user=James; theme=dark;
+What is a Session?
+	A session stores user data on the server, and only a session ID is stored in the browser cookie.
+	
+	Client → cookie: sessionId
+	Server → session data
+
