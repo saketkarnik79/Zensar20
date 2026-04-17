@@ -1,0 +1,604 @@
+Hooks
+	Hooks were introduced in React 16.8. These hoohs let you use "state" and other React features including "Lifecycle Methods" without writing a class.
+	
+	Background of Hooks	
+		React has always had two types of components: class & function.
+		Before hooks, class & function components were not interchangeable.
+		Before Hooks, function components had two feature limitations:
+			couldn't have state.
+			couldn't have lifecycle events.
+		After Hooks, function components became more capable than class components.
+			can have state(useState hook)
+			can handle lifecycle event(useEffect hooks)
+			can reuse stateful logic with "Custom Hooks"
+	Why Hooks?
+		Complex components become hard to understand.
+		lifecycle events like componentDidMount & componentDidUpdate contain code to address mixed concerns:
+			data fetching
+			setting up event listeners
+			leads to bugs & inconsistencies
+		Classes confuse both people & machines
+			class can be a large barrier in order to learn React.
+				Understanding "this" in JavaScript.
+				code is verbose without unstable sytax proposals
+				when to use class vs function components
+			classes don't work well with modern tools
+				don't minify efficiently.
+				don't shake DOM tree efficiently.
+				make hot reloading flaky & unreliable.
+	
+	No Breaking changes
+		Complete opt-in feature.
+		100% backwards-compatible.
+		Hook's doesn't replace your existing knowledge base or skill set of ReactJS.
+		
+	Hooks API
+	
+	Rules of Hooks
+		only call hooks at the top level of your function component.
+		only call hooks from React functions (React function components/Custom hooks)
+State
+	A component needs state when some data associated with it changes over time.
+Side Effects & Lifecycle
+	useEffect
+		
+Conditional Rendering
+	function DropdownMenu() {
+	  const [isOpen, setIsOpen] = React.useState(false);
+	  const handleClick = () => {
+		setIsOpen((currentIsOpen) => !currentIsOpen);
+	  };
+
+	  return (
+		<div>
+		  <button onClick={handleClick}>Actions</button>
+		  {isOpen ? (
+			<ul>
+			  <li>Edit</li>
+			  <li>Remove</li>
+			  <li>Archive</li>
+			</ul>
+		  ) : null}
+		</div>
+	  );
+	}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<DropdownMenu />);
+
+function DropdownMenu() {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const handleClick = () => {
+    setIsOpen((currentIsOpen) => !currentIsOpen);
+  };
+
+  return (
+    <div>
+      <button onClick={handleClick}>Actions</button>
+      {isOpen && (
+        <ul>
+          <li>Edit</li>
+          <li>Remove</li>
+          <li>Archive</li>
+        </ul>
+      )}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<DropdownMenu />);
+
+Component Architecture
+function Button({ onClickFunction }) {
+  return <button onClick={onClickFunction}>+1</button>;
+}
+
+const Result = ({ value }) => {
+  return <div>Result: {value}</div>;
+};
+
+function App() {
+  const [counter, setCounter] = React.useState(0);
+
+  const incrementCounter = () => {
+    setCounter((previousCounter) => previousCounter + 1);
+  };
+
+  return (
+    <div>
+      <Button onClickFunction={incrementCounter} />
+      <Result value={counter} />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+
+Forms
+	Controlled Components
+		function ExampleForm() {
+		  const [value, setValue] = React.useState('');
+
+		  const handleChange = (event) => {
+			setValue(event.target.value.toUpperCase());
+		  };
+
+		  return (
+			<form>
+			  <input type="text" value={value} onChange={handleChange} />
+			  <pre>{value}</pre>
+			</form>
+		  );
+		}
+
+		ReactDOM.createRoot(document.getElementById('root')).render(<ExampleForm />);
+		
+function SigninForm() {
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(username, password);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="username"
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
+      />
+      <input
+        type="password"
+        name="password"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+      />
+      <button type="submit">Sign In</button>
+    </form>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<SigninForm />);
+
+function ContactUsForm() {
+  const [department, setDepartment] = React.useState('');
+  const [message, setMessage] = React.useState('');
+  const [agreedToTerms, setAgreedToTerms] = React.useState(false);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    console.log('submitting', stateToString());
+  }
+
+  function stateToString() {
+    return JSON.stringify(
+      {
+        department,
+        message,
+        agreedToTerms,
+      },
+      null,
+      2
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <select
+        name="department"
+        value={department}
+        onChange={(e) => setDepartment(e.target.value)}
+      >
+        <option value="">Select...</option>
+        <option value="hr">Human Resources</option>
+        <option value="pr">Public Relations</option>
+        <option value="support">Support</option>
+      </select>
+      <br />
+      <br />
+      <textarea
+        name="message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        cols="30"
+        rows="10"
+      />
+      <br />
+      <input
+        type="checkbox"
+        name="agreedToTerms"
+        checked={agreedToTerms}
+        onChange={(e) => setAgreedToTerms(e.target.checked)}
+      />
+      I agree to the terms and conditions.
+      <br />
+      <button>Send</button>
+    </form>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<ContactUsForm />);
+
+
+function ContactUsForm() {
+  const [department, setDepartment] = React.useState('');
+  const [message, setMessage] = React.useState('');
+  const [agreedToTerms, setAgreedToTerms] = React.useState(false);
+
+  const [departmentError, setDepartmentError] = React.useState(null);
+  const [messageError, setMessageError] = React.useState(null);
+  const [agreedToTermsError, setAgreedToTermsError] = React.useState(null);
+
+  const [departmentTouched, setDepartmentTouched] = React.useState(false);
+  const [messageTouched, setMessageTouched] = React.useState(false);
+  const [agreedToTermsTouched, setAgreedToTermsTouched] = React.useState(false);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const isValid = !departmentError && !messageError && !agreedToTermsError;
+    if (!isValid) {
+      return;
+    }
+    console.log('submitting', { department, message, agreedToTerms });
+  }
+
+  React.useEffect(() => {
+    validate();
+  }, [department, message, agreedToTerms]);
+
+  function validate() {
+    setDepartmentError(null);
+    setMessageError(null);
+    setAgreedToTermsError(null);
+    if (department === '') {
+      setDepartmentError('Department is required.');
+    }
+    if (message === '') {
+      setMessageError('Message is required.');
+    }
+    if (agreedToTerms === false) {
+      setAgreedToTermsError('You must agree to the terms and conditions.');
+    }
+  }
+
+  function stateToString() {
+    return JSON.stringify(
+      {
+        values: { department, message, agreedToTerms },
+        errors: { departmentError, messageError, agreedToTermsError },
+        touched: { departmentTouched, messageTouched, agreedToTermsTouched },
+      },
+      null,
+      2
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <select
+        name="department"
+        value={department}
+        onChange={(e) => setDepartment(e.target.value)}
+        onBlur={(e) => setDepartmentTouched(true)}
+      >
+        <option value="">Select...</option>
+        <option value="hr">Human Resources</option>
+        <option value="pr">Public Relations</option>
+        <option value="support">Support</option>
+      </select>
+      <br />
+      {departmentError && departmentTouched && (
+        <p className="alert">{departmentError}</p>
+      )}
+      <br />
+      <textarea
+        name="message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        onBlur={(e) => setMessageTouched(true)}
+        cols="30"
+        rows="10"
+      />
+      <br />
+      {messageError && messageTouched && (
+        <p className="alert">{messageError}</p>
+      )}
+      <input
+        type="checkbox"
+        name="agreedToTerms"
+        checked={agreedToTerms}
+        onChange={(e) => setAgreedToTerms(e.target.checked)}
+        onBlur={(e) => setAgreedToTermsTouched(true)}
+      />
+      I agree to the terms and conditions.
+      <br />
+      {agreedToTermsError && agreedToTermsTouched && (
+        <p className="alert">{agreedToTermsError}</p>
+      )}
+      <button>Send</button>
+      <pre>{stateToString()}</pre>
+    </form>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<ContactUsForm />);
+
+React Hook Form
+	npm install react-hook-form
+	
+function SigninForm() {
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(username, password);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="username"
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
+      />
+      <input
+        type="password"
+        name="password"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+      />
+      <button type="submit">Sign In</button>
+    </form>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<SigninForm />);
+
+
+const { useForm } = window.ReactHookForm;
+
+function App() {
+  const { register, handleSubmit } = useForm();
+
+  const signIn = (data) => {
+    console.log(data);
+  };
+
+  console.log({ ...register('username') });
+
+  return (
+    <form onSubmit={handleSubmit(signIn)}>
+      <input type="text" {...register('username')} placeholder="Username" />
+      <input
+        type="password"
+        {...register('password')}
+        placeholder="Password"
+      />
+      <button type="submit">Sign In</button>
+    </form>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+
+const { useForm } = window.ReactHookForm;
+
+function ContactUsForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: 'onTouched', // Validate when the field is touched and loses focus
+    reValidateMode: 'onChange', // After an error appears, update it on every keystroke
+  });
+
+  function send(data) {
+    console.log(data);
+  }
+
+  return (
+    <form onSubmit={handleSubmit(send)}>
+      <select
+        {...register('department', { required: 'Department is required' })}
+      >
+        <option value="">Select...</option>
+        <option value="hr">Human Resources</option>
+        <option value="pr">Public Relations</option>
+        <option value="support">Support</option>
+      </select>
+      <br />
+      {errors.department && (
+        <p className="alert">{errors.department?.message}</p>
+      )}
+      <br />
+      <textarea
+        {...register('message', { required: 'A message is required' })}
+        cols="30"
+        rows="10"
+      />
+      <br />
+      {errors.message && <p className="alert">{errors.message?.message}</p>}
+      <br />
+      <input
+        {...register('agreeToTerms', {
+          required: 'You must accept the terms to send',
+        })}
+        type="checkbox"
+      />
+      I agree to the terms and conditions.
+      <br />
+      {errors.agreeToTerms && (
+        <p className="alert">{errors.agreeToTerms?.message}</p>
+      )}
+      <br />
+      <button>Send</button>
+    </form>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<ContactUsForm />);
+
+
+const { useForm } = window.ReactHookForm;
+function ContactUsForm() {
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      department: 'support',
+      message: 'I need a refund.',
+      agreeToTerms: true,
+    },
+  });
+
+  function send(data) {
+    console.log(data);
+  }
+
+  return (
+    <form onSubmit={handleSubmit(send)}>
+      <select {...register('department')}>
+        <option value="">Select...</option>
+        <option value="hr">Human Resources</option>
+        <option value="pr">Public Relations</option>
+        <option value="support">Support</option>
+      </select>
+      <br />
+      <p className="alert"></p>
+      <br />
+      <textarea {...register('message')} cols="30" rows="10" />
+      <br />
+      <input {...register('agreeToTerms')} type="checkbox" />
+      I agree to the terms and conditions.
+      <br />
+      <button>Send</button>
+    </form>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<ContactUsForm />);
+
+
+const { useForm } = window.ReactHookForm;
+
+let contact = {
+  department: 'support',
+  message: 'I need a refund.',
+  agreeToTerms: true,
+};
+
+let contactAPI = {
+  find(id) {
+    //calling api here in the real world
+    return Promise.resolve(contact);
+  },
+};
+
+function ContactUsForm({ id }) {
+  const { register, handleSubmit } = useForm({
+    defaultValues: async () => {
+      let contact = await contactAPI.find(id);
+      return contact;
+    },
+  });
+
+  function send(data) {
+    console.log(data);
+  }
+
+  return (
+    <form onSubmit={handleSubmit(send)}>
+      <select {...register('department')}>
+        <option value="">Select...</option>
+        <option value="hr">Human Resources</option>
+        <option value="pr">Public Relations</option>
+        <option value="support">Support</option>
+      </select>
+      <br />
+      <p className="alert"></p>
+      <br />
+      <textarea {...register('message')} cols="30" rows="10" />
+      <br />
+      <input {...register('agreeToTerms')} type="checkbox" />
+      I agree to the terms and conditions.
+      <br />
+      <button>Send</button>
+    </form>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<ContactUsForm />);
+	
+Setting Up Backend APIs
+	Mocking Frameworks
+	Json Server to create REST endpoints based on json file as a database
+	Write your own REST APIs
+HTTP Communication
+	axios
+		npm install axios
+		
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			...
+		</head>
+		<body>
+			<div id="root"></div>
+			...
+			<script src="/node_modules/@babel/standalone/babel.min.js"></script>
+		    <script src="/node_modules/axios/dist/axios.js"></script>
+			<script type="text/babel" src="/main.js"></script>
+		</body>
+		</html>
+		
+		const okUrl = 'http://localhost:3000/photos?_page=1&_limit=100';
+		const notFoundErrorUrl = 'https://httpstat.us/404';
+		const forbiddenErrorUrl = 'https://httpstat.us/403';
+		const serverErrorUrl = 'https://httpstat.us/500';
+		// const urls here
+
+		axios
+		  .get(okUrl)
+		  .then((response) => response.data)
+		  .then((data) => console.log(data));
+		  
+		 // const urls here
+
+		axios
+			.get(serverErrorUrl)
+			.then(response => response.data)
+			.then(data => console.log(data))
+			.catch(error => console.log(error));
+	
+	Fetch
+		// const urls here
+		fetch(okUrl).then((response) => console.log(response));
+		
+		// const urls here
+
+		fetch(okUrl)
+		  .then((response) => {
+			console.log(response);
+			return response;
+		  })
+		  .then((response) => response.json())
+		  .then((data) => console.log(data));
+		  
+		// const urls here
+
+		fetch(serverErrorUrl)
+			.then(response => {
+			console.log(response);
+			return response;
+			})
+			.then(response => response.json())
+			.then(data => console.log(data));
+			.catch(error => console.log(error));
+			
