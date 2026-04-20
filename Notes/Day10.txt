@@ -1,0 +1,40 @@
+Redux
+	What is Redux?
+		It is an open-source JavScript library for managing the application state.
+		Commonly used with libraries sunch as React or Angular for building user interfaces.
+		It is inspired from facebook's flux architecture, hence has similarity with it.
+	Redux Architecture
+		The primary reason you need Redux is to help share data & functions between components in your applications which are in different parts of the component tree & not immediate relatives.
+		The sharing between components is achieved by pulling the data & functions out of the components & into a shared object(Store) that is not a component.
+		You may need Redux for more reasons as well.
+	Principles of Redux
+		Single source of truth
+			let appState = {
+			  todos: [
+				{ text: 'Consider using Redux', completed: true },
+				{ text: 'Keep all state in a single tree', completed: false },
+			  ],
+			  visibilityFilter: 'SHOW_ALL',
+			};
+		State is read-only.
+			store.dispatch({ type: 'ADD_TODO', text: 'Learn Redux' });
+		Changes are made with pure functions
+			function reducer(state = initialState, action) {
+			  switch (action.type) {
+				case 'LOAD_PHOTOS_REQUEST':
+				  return { ...state, processing: true };
+				case 'LOAD_PHOTOS_SUCCESS':
+				  return { ...state, processing: false, photos: action.payload };
+				case 'LOAD_PHOTOS_FAILURE':
+				  return { ...state, processing: false, error: action.payload.message };
+				default:
+				  return state;
+			  }
+			}
+React Redux
+	React binding for Redux (using some hooks like useSelector, useDispatch)
+Redux Thunk
+	Thunk is a middleware to enable async actions.
+	Is a separate package/library.
+React Redux Thunk
+	React extensions for Redux Thunk
