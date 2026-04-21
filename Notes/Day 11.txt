@@ -1,0 +1,212 @@
+Introduction to GEN AI
+What is GEN AI?
+	GEN AI stands for Generative AI and refers to a type of artificial intelligence that is capable of generating new content-such as text, images, videos, music, code, etc. rather than just analyzing or classifying existing data.
+	It works by learning patterns from large amounts of data & then using those patterns to generate original outputs that resemble what humans create.
+	GEN AI doesn't just understand data, ir creates new content from it.
+
+	• Microsoft Copilot
+		What is it?
+			Enterprise-focused GEN AI assistant that is integrated into Microsoft 365 apps.
+			Uses GEN AI to create, summarize, analyze & transform the content like documents, emails, presentations & data.
+			Designed to boost productivity & decision making using both AI models & your organizaion's data while respecting security & permissions compliances.
+			Think of it as GEN AI for everyday business work.
+
+	• GitHub Copilot
+		What is it?
+			Developer-focused GEN AI assistant embedded in code editors(VS Code, Visual Studio, JetBrains, Eclipse, etc.).
+			Uses GEN AI to write, complete, explain, & refactor code based on the context & the comments.
+			Trained on large amounts of public code & optimized for software development workflows.
+			Think of it as GEN AI for coding & software engineering.
+
+Foundations: Copilot in the .NET Engineering Context
+	• What GitHub Copilot is and is not?
+		What Copilot means for .NET engineers?
+			In .NET engineering, Copilot typically refers to AI assisted development tools embedded directly into developer workflows. The most common developer workflows include:
+				GitHub Copilot
+				Microsoft 365 Copilot
+				Copilot extensions in Microsoft Azure, Azure DevOps tooling
+			Each of them plays a different role across the software delivery lifecycle, not just writing code.
+			
+			Copilot for .NET Code Development(GitHub Copilot)
+				Where it fits?:
+					Visual Studio
+					VS Code
+					JetBrains
+					Eclipse
+					Many other IDEs
+				What are the core capabilities of GitHub Copilot for .NET?
+					Code generation & completion
+					Refactoring & Modernization
+					Test & Quality Acceleration
+					Spend less time on mechanical coding, more time on architecture, correctness & performance.
+			Copilot in ASP.NET & Cloud-Native Engineering
+				API & Backend Development
+				Azure-Native .NET Workloads
+				Copilot encodes platform best practices, not business context.
+			Copilot in engineering documention & design
+				This is where M365 Copilot does complement GitHub Copilot.
+					Top use case:
+						Convert C# Code to design documentation
+						Summarize Pull Requests for the architecture reviews
+						Generate Architecture Decision Record drafts
+						Explaining legacy .NET modules to new team members
+			DevOps & CI/CD Assistance in .NET Projects
+				Copilot supports;
+					Azure DevOps YAML pipelines.
+					GitHub Actions for .NET builds.
+					Packaging, versioning & release notes.
+					Explaining failing pipelines.
+					Translating build errors into actionable steps.
+					Reviewing PRs differences
+				Limitations of Copilot
+					Copilot does not:
+						understand domain rules or regulatory constraints.
+						guarantee performance, security, or correctness.
+						replace code reviews or design ownership.
+			Governance & Enterprise Use in .NET Teams
+				Best practices:
+					Enable Copilot with enterprise controls.
+					Define "AI-acceptable code" guidelines.
+					Mandate human review for security-critical paths.
+					Disallow blid generation for cryptography, payments, etc.
+			Where Copilot delivers the Most ROI in .NET
+				New service scaffolding.
+				API & contract generation
+				Test creation
+				Legacy code explanation
+				Documentation automation
+			
+	• How Copilot works — LLMs, context window, tokens
+		LLMs-The Enginw
+			It powers all AI including MS65 Copilot, GitHub Copilot.
+			What an LLM is?
+				It stands for Large Language Model and technically a neural network trained on massive volumes of text & code to learn statistical patterns such as:
+					Syntax
+					Naming Conventions
+					API usageCommon design Patterns
+					Natural Language -> code mappings
+				LLMs don't reason like humans & don't understand meaning in the semantic sense.
+				They predict:
+					What token is most likely to come next given the previous token?
+				This applies equally to:
+					English paragraphs
+					C# methods
+					YAML pipelines
+					SQL Queries
+					and many more.
+		Token: The Atomic Unit
+			What is token?
+				A token is not necessarily a word.
+				A token can be:
+					A word fragment
+					A symbol
+					Part of keyword
+					Withespace or punctuation
+				e.g.
+					"public" -> token
+					"authentication" - May be 2-3 tokens
+					"OrderServiceFactory" -> multiple tokens
+					"{", "(", "=>" -> separate tokens
+				LLMs operate only on tokens.
+			Why tokens matter?
+				They matter as they determine:
+					How much information fits into the model's "memory".
+					Cost & Latency
+					Whether Copilot "forgets" earlier parts of your code.
+		Context Window: Copilot's short term memory
+			What is context Window?
+				The context Window is the maximum number of tokens Copilot can see at once.
+				It typically includes:
+					Current file content
+					Nearby code blocks
+					Open editor tabs
+					Your cusrsor position
+					Your comment or prompt
+					Language/framework signals
+			Copilot does not see:
+				Your entire repository
+				Closed Files
+				Jira Tickets
+				Architectural Diagrams
+				Production Configs
+				Runtime behvior
+				
+				// Create a validator for this request
+				public record CreateOrderRequest(Guid CustomerId, decimal Total);
+		Prompt + Context -> Prediction
+			Whenever you type a comment, Copoilot performs the following steps:
+				Tokenizes
+					Your Code
+					Your comment
+					Nearby Context
+				Feeds tokens into the LLM
+				Calculate probabilitis for the next tokens.
+				Propses the most likely continuation
+				e.g. services.AddScoped<IOrderService, OrderService>();
+			What Copilot doesn't remember?
+				Copilot does not have: 
+					Long term memory
+					Awareness of previous chats
+					Persistent understanding of your project
+			Practical Engineering Implications
+				To get better results:
+					Keep related code nearby
+					Use clear comments
+					Name things explicitly
+					Open relvant files
+					Avoid huge, unfocused files.
+				To avoid risk:
+					Review every suggestion
+					Don't trust security-sensitive code
+					Validate APIs & behavior
+					Treat Copilot output as draft, not decision.
+	• Copilot vs Chat-based AI tools
+		Copilot writes code inside uour editor using local context whereas chat-based AI explains, designs, & reasons outside your editor using the conversational context.
+		
+		// Generate EF Core configuration for Order entity
+		
+		Explain whether CQRS makes sense for this .NET service and list the trade-offs.
+	• Licensing, enterprise policies, telemetry basics
+		Licensing: Who can use Copilot & How?
+			GitHub Copilot is licensed per user.
+		Enterprise Policy Controls:
+			Github Copilot Business/Enterprise introduces admin-level governance.
+				Organization Level Controls
+					Admins can:
+						Enable or disable Copilot per org.
+						Limit usage to specific repositories.
+						Manage which IDES are supported.
+						Enforce authentication via enterprise identity.
+				Code reference & Filtering controls
+					Enterprise plans allow policies around:
+						Blocking suggestions that closely resemble public code.
+						Reducing risk of license contamination
+						Enforcing safer defaults.
+					
+		Telemetry Basics: What data is/isn't collected.
+			
+	• Responsible AI usage in enterprise environments
+		
+	• IP, confidentiality, and secure coding considerations
+		
+Copilot Setup & Productivity Configuration
+	• Installing Copilot in Visual Studio 2022+ and VS Code
+	• Enabling Copilot Chat
+	• Copilot inline vs chat usage patterns
+	• Keyboard shortcuts & productivity tips
+	• When to disable Copilot (sensitive code zones)
+
+Prompt Engineering for Developers
+	• Prompt fundamentals — what to include (intent, constraints, patterns) and what to avoid
+	• Inline prompts vs chat-based prompts
+	• Refinement techniques — iterative prompting & correction prompts
+	• Using comments as design intent
+	• Role-based prompts (e.g., "Act as a senior .NET architect...")
+	• .NET-specific prompt patterns — API controllers, domain services, repositories, DTO mappings, validation logic
+
+Technical Design & Architecture Support with Copilot
+	• Translating requirements into technical design drafts
+	• Using Copilot Chat to propose architecture options and evaluate trade-offs (CQRS, Clean Architecture, DDD)
+	• Creating sequence flows and component responsibilities
+	• Generating skeletons from design intent
+	• .NET focus — Web API structure, layered architecture, Clean Architecture patterns, Microservices vs Monolith

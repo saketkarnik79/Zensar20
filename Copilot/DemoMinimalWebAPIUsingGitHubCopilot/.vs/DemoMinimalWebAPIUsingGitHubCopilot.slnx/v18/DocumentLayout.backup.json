@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Zensar20\\Copilot\\DemoMinimalWebAPIUsingGitHubCopilot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{570964D1-1B80-4A9C-A97F-E91D8D54FC2E}|DemoMinimalWebAPIUsingGitHubCopilot\\DemoMinimalWebAPIUsingGitHubCopilot.csproj|c:\\zensar20\\copilot\\demominimalwebapiusinggithubcopilot\\demominimalwebapiusinggithubcopilot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{570964D1-1B80-4A9C-A97F-E91D8D54FC2E}|DemoMinimalWebAPIUsingGitHubCopilot\\DemoMinimalWebAPIUsingGitHubCopilot.csproj|solutionrelative:demominimalwebapiusinggithubcopilot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2000AE1-7E8A-4DCB-82D0-2E2089906EF5}|DemoMinimalWebAPIUsingGitHubCopilot.UnitTests\\DemoMinimalWebAPIUsingGitHubCopilot.UnitTests.csproj|c:\\zensar20\\copilot\\demominimalwebapiusinggithubcopilot\\demominimalwebapiusinggithubcopilot.unittests\\programtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2000AE1-7E8A-4DCB-82D0-2E2089906EF5}|DemoMinimalWebAPIUsingGitHubCopilot.UnitTests\\DemoMinimalWebAPIUsingGitHubCopilot.UnitTests.csproj|solutionrelative:demominimalwebapiusinggithubcopilot.unittests\\programtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProgramTests.cs",
+              "DocumentMoniker": "C:\\Zensar20\\Copilot\\DemoMinimalWebAPIUsingGitHubCopilot\\DemoMinimalWebAPIUsingGitHubCopilot.UnitTests\\ProgramTests.cs",
+              "RelativeDocumentMoniker": "DemoMinimalWebAPIUsingGitHubCopilot.UnitTests\\ProgramTests.cs",
+              "ToolTip": "C:\\Zensar20\\Copilot\\DemoMinimalWebAPIUsingGitHubCopilot\\DemoMinimalWebAPIUsingGitHubCopilot.UnitTests\\ProgramTests.cs",
+              "RelativeToolTip": "DemoMinimalWebAPIUsingGitHubCopilot.UnitTests\\ProgramTests.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwC4AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T06:51:15.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Zensar20\\Copilot\\DemoMinimalWebAPIUsingGitHubCopilot\\DemoMinimalWebAPIUsingGitHubCopilot\\Program.cs",
+              "RelativeDocumentMoniker": "DemoMinimalWebAPIUsingGitHubCopilot\\Program.cs",
+              "ToolTip": "C:\\Zensar20\\Copilot\\DemoMinimalWebAPIUsingGitHubCopilot\\DemoMinimalWebAPIUsingGitHubCopilot\\Program.cs*",
+              "RelativeToolTip": "DemoMinimalWebAPIUsingGitHubCopilot\\Program.cs*",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T06:37:22.148Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

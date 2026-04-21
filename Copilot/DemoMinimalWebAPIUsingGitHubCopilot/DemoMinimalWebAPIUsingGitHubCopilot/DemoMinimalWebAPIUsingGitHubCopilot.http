@@ -1,0 +1,6 @@
+@DemoMinimalWebAPIUsingGitHubCopilot_HostAddress = http://localhost:5197
+
+GET {{DemoMinimalWebAPIUsingGitHubCopilot_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
