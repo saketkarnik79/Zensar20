@@ -1,0 +1,172 @@
+Prompt Engineering for Developers
+	• Prompt fundamentals — what to include (intent, constraints, patterns) and what to avoid
+		A good prompt answers three questions for the model:
+			Intent - Waht outcome do I want?
+			Contraints - What must or must not happen?
+				// Refactor this method to be async-safe.
+				// Constraints:
+				// - Do not change method signature
+				// - Preserve existing behavior
+				// - No new dependencies
+				
+				Suggest refactoring steps to improve readability.
+				Constraints:
+				- No behavior change
+				- No new libraries
+				- Keep public API stable
+			Patterns - What dos "right" look like here?
+				// Create another method like the previous one
+			
+				// Follow the pattern used in GetActiveOrdersAsync
+				// Create a new method GetArchivedOrdersAsync
+				
+				Use the first method as the pattern.
+				Rewrite the second to match its structure and error handling.
+		What to avoid?
+			Vague language
+			Overloaded Prompts
+				Rewrite this class, improve performance, add security, modernize it, and document it.
+			Assume Copilot has Implicit Domain Knowledge 
+			Asking Copilot to Decide Policy
+			
+		Prompt Templates
+			(Inline Template)
+			// [Action]
+			// Constraints:
+			// - [Must]
+			// – [Must not]
+			
+			// Add validation for CreateOrderRequest
+			// Constraints:
+			// - Do not change controller signature
+			// - Return BadRequest on validation failure
+			(Chat Template)
+			Intent:
+			[What you want]
+
+			Constraints:
+			- [Rule 1]
+			- [Rule 2]
+
+			Questions:
+			- [What you want evaluated]
+		Good prompts state the intent, enforce constraints & anchor ro real patterns.
+		
+	• Inline prompts vs chat-based prompts
+	• Refinement techniques — iterative prompting & correction prompts
+		Copilot works best when  you treat output as a draft, not a decision.
+		Refinement is not about "getting the perfect propmt", rather it's about progressively narrowing the solution space using short, intentional feedback.
+		Correction Prompts
+		Types of Refinement
+			Semantic Refinement
+			Structural Refinement
+			Policy Refinement
+		'Don't Exapnd' rule
+		Progressive Constraint Tightning
+		A simple refinement checklist
+			Ask:
+				What exactly is wrong right now?
+				Am I fixing behavior, structure or policy?
+				Can I describe the correction in one simple sentence?
+	• Using comments as design intent
+		For copilot, comment are:
+			Intent signals
+			Constraint signals
+			Pattern Signals
+		What Design-Intent comments are?
+			The Design-Intent comments answer:
+				Why does this exist?
+				What must remain true?
+				What would be wrong to change casully?
+	• Role-based prompts (e.g., "Act as a senior .NET architect...")
+		Act as a senior .NET architect.
+		Review this service and identify architectural risks and boundary violations.
+		
+		Act as a security-focused backend engineer.
+		Explain what security concerns exist in this code.
+
+		Act as a performance-oriented engineer.
+		What scalability bottlenecks do you see?
+		
+		Act as an enterprise architect and refactor this class. Incorrect prompt.
+		
+		Act as a senior .NET architect.
+		Constraints:
+		- Preserve behavior
+		- No new dependencies
+		- Enforce separation between domain and infrastructure
+		
+		Act as a senior .NET architect.
+		Review this service for architectural issues.
+		Assume this runs in a regulated environment.
+		Do not propose solutions yet.
+		- What boundaries are violated?
+		- What responsibilities are unclear?
+		
+		Review this code from the perspective of a maintainer
+		who must support it for five years.
+		
+		Act as a skeptical reviewer.
+		Your job is to find what could go wrong here.
+		
+	• .NET-specific prompt patterns — API controllers, domain services, repositories, DTO mappings, validation logic
+		
+		// Handle HTTP validation and response mapping only.
+		// Delegate all business logic to IOrderService.
+		// Return IActionResult with appropriate status codes.
+		
+		
+		Explain whether this controller violates the thin-controller principle.
+		List specific examples.
+		Do not suggest code changes yet.
+
+		// Business logic only:
+		// - No persistence
+		// - No HTTP concerns
+		// - No authorization logic
+		// Assumes inputs are already validated.
+		
+		Review this service from a domain-driven design perspective.
+		Are responsibilities cohesive?
+		What assumptions does this logic make?
+		
+		
+		// Follow the same pattern as GetActiveOrdersAsync.
+		// This method:
+		// - Performs no business logic
+		// - Returns null if not found
+		// - Does not throw domain exceptions
+		
+		
+		Explain what queries this repository method will generate.
+		Are there performance or N+1 risks?
+		
+		
+		// Map Order entity to OrderDto.
+		// Pure mapping only.
+		// No null handling beyond property copying.
+		
+		Compare Order and OrderDto.
+		What fields are missing or at risk of incorrect mapping?
+		
+		// Validate CreateOrderRequest:
+		// - CustomerId must not be empty
+		// - TotalAmount > 0
+		// - Return ValidationResult (do not throw)
+		
+		What validation scenarios are missing for this request?
+		Focus on edge cases and invalid states.
+		
+		// Follow the same structure and error handling
+		// as CreateOrderAsync.
+		
+Technical Design & Architecture Support with Copilot
+	• Translating requirements into technical design drafts
+		Structure the requirements
+		Encode intent and constraints
+		Use Copilot to expand, challenge, and document
+		Retain human ownership of decisions
+	• Using Copilot Chat to propose architecture options and evaluate trade-offs (CQRS, Clean Architecture, DDD)
+	• Creating sequence flows and component responsibilities
+	• Generating skeletons from design intent
+	• .NET focus — Web API structure, layered architecture, Clean Architecture patterns, Microservices vs Monolith

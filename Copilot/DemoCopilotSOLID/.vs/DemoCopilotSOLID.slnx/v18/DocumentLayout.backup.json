@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|c:\\zensar20\\copilot\\democopilotsolid\\democopilotsolid\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|solutionrelative:democopilotsolid\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|c:\\zensar20\\copilot\\democopilotsolid\\democopilotsolid\\services\\ordercalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|solutionrelative:democopilotsolid\\services\\ordercalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "DemoCopilotSOLID\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\OrderService.cs",
+              "RelativeToolTip": "DemoCopilotSOLID\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:44:45.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderCalculator.cs",
+              "DocumentMoniker": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\OrderCalculator.cs",
+              "RelativeDocumentMoniker": "DemoCopilotSOLID\\Services\\OrderCalculator.cs",
+              "ToolTip": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\OrderCalculator.cs",
+              "RelativeToolTip": "DemoCopilotSOLID\\Services\\OrderCalculator.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADgvx4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:34:49.138Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

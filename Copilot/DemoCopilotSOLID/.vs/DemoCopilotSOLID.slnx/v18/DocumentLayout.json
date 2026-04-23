@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|c:\\zensar20\\copilot\\democopilotsolid\\democopilotsolid\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|solutionrelative:democopilotsolid\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|c:\\zensar20\\copilot\\democopilotsolid\\democopilotsolid\\services\\ordercalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|solutionrelative:democopilotsolid\\services\\ordercalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|c:\\zensar20\\copilot\\democopilotsolid\\democopilotsolid\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|solutionrelative:democopilotsolid\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|c:\\zensar20\\copilot\\democopilotsolid\\democopilotsolid\\services\\sqlorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|solutionrelative:democopilotsolid\\services\\sqlorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|c:\\zensar20\\copilot\\democopilotsolid\\democopilotsolid\\services\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3A0E6C9-22CF-4B0A-9A78-6A14F56FC345}|DemoCopilotSOLID\\DemoCopilotSOLID.csproj|solutionrelative:democopilotsolid\\services\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderCalculator.cs",
+              "DocumentMoniker": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\OrderCalculator.cs",
+              "RelativeDocumentMoniker": "DemoCopilotSOLID\\Services\\OrderCalculator.cs",
+              "ToolTip": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\OrderCalculator.cs",
+              "RelativeToolTip": "DemoCopilotSOLID\\Services\\OrderCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:48:23.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Program.cs",
+              "RelativeDocumentMoniker": "DemoCopilotSOLID\\Program.cs",
+              "ToolTip": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Program.cs",
+              "RelativeToolTip": "DemoCopilotSOLID\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:47:55.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "DemoCopilotSOLID\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\OrderService.cs",
+              "RelativeToolTip": "DemoCopilotSOLID\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:45:57.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "DemoCopilotSOLID\\Services\\IOrderRepository.cs",
+              "ToolTip": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\IOrderRepository.cs",
+              "RelativeToolTip": "DemoCopilotSOLID\\Services\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:45:39.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SqlOrderRepository.cs",
+              "DocumentMoniker": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\SqlOrderRepository.cs",
+              "RelativeDocumentMoniker": "DemoCopilotSOLID\\Services\\SqlOrderRepository.cs",
+              "ToolTip": "C:\\Zensar20\\Copilot\\DemoCopilotSOLID\\DemoCopilotSOLID\\Services\\SqlOrderRepository.cs",
+              "RelativeToolTip": "DemoCopilotSOLID\\Services\\SqlOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:45:12.39Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

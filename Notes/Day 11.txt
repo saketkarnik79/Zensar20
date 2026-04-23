@@ -191,6 +191,7 @@ Foundations: Copilot in the .NET Engineering Context
 		
 Copilot Setup & Productivity Configuration
 	• Installing Copilot in Visual Studio 2022+ and VS Code
+	
 	• Enabling Copilot Chat
 	• Copilot inline vs chat usage patterns
 	• Keyboard shortcuts & productivity tips
