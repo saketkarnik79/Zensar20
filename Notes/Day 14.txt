@@ -1,0 +1,117 @@
+Introduction to Accessibility & WCAG
+	• What is Web Accessibility & why it matters?
+		Web accessibility means designing & developing websites, apps & digital content so that people of all abilities can use them effectively & comfortably. This includes users with:
+			Visual impairments
+			Hearing impairments
+			Motor impairments
+			Cognitive or neurological consitions
+			Temporary or situation limitations
+		An accessible webiste ensures users can percieve, understand, navigate & interact with content using assistive technologies like screen readers, keyboard navigation, voice input, gesture input, & screen magnifiers.
+		
+		Most of these accesibility standars are guided by the WCAG(Web Content Accessibility Guidelines), organized around four core principles: Percievable, operable, Understandable & Robust (POUR Principles).
+		Why web accessibility matters?
+			It's about inclusion & equal access
+			Affects a large population
+			Legal & Compliance Requirements
+			Better user experience for all
+			Improved SEO & performance
+			Ethical & Brand Responsibility
+		
+		Examples of Accessible Web Practices
+			Using alt text from images
+			Providing captions & transcripts for videos
+			Ensuring full keyboard navigation
+			Designing with sufficient color contrast
+			Using clear, simple language
+			Structuring pages with proper headings			
+	• Business, legal & compliance importance (ADA, global standards)
+		Web accessibility is no longer just a "good to have" kind of feature. It is a businessimperative, a legal requirement, and a compliance responsibility accross many regions worldwide.
+		Busines  Importance
+			Market reach & revenue growth
+			Stronger brand reputation
+			Better usability & performance for all users
+			SEO & Technical quality benefits
+		Legal Importance (ADA & Key Global Laws)
+			USA - ADA (Americans with Disabilities Act
+			EU - EAA (European Accessibility Act)
+			IN - Rights of Persons with Disabilites Act(RPWD)
+		Global Standards: WCAG as the Common Framework
+		Compliance & Risk Management		
+	• Overview of Web Content Accessibility Guidelines
+		The WCAG are a set of international standards designed to make web content more accessible to people with disabilities. They are developed by W3C through its Web Accessibility Initiative(WAI) ad are the foundation for most digital accessibility laws & policies worldwide.
+		What WCAG applies to?
+			Websites & web apps
+			Mobile Apps
+			Digital Documents (PDFs, Word, PPT, XPS, etc.)
+			Multimedia(Audio, Video, Animations)
+			Emerging digital technologies
+	• WCAG versions: 2.0 (2008), 2.1 (2018), 2.2 (2023), WCAG 3.0 (Currently a working draft) — key differences
+		WCAG Conformance Levels
+			Level A - Minimum
+			Level AA - Recommended/Legal Standard
+			Level AAA -Enhanced
+	• POUR principles: Perceivable, Operable, Understandable, Robust
+		P - Percievable
+			Information & UI components must be presented in ways users can percievem regardless of sesory limitations.
+			Text Alternative(Alt text for images, icons)
+			Audio/Video accesibility((captions, transcripts)
+			Color Contrast requirements & readability
+			Responsive/adaptable layouts
+			Semantic HTML Structure (headings, landmarks)
+		O - Operable
+			Users must be able to operate the interface using various input methods.
+				Keyboard Accessibilty - tab order & navigation flow
+				Focus management & visible focus indicators
+				Accessible Navigation - menus, skip links
+				Avoiding keyboard traps
+				Time-based interactions (timeouts, pauses)
+		U - Understandable
+			Content & UI operation must be easy to understand.
+				Readable & simple content design
+				Predictable navigation & consistent UI behavior
+				Form accessibility - labels, instructions, error handling & suggestions
+				Input assistance techniques
+		R - Robust
+			Content must work reliably across current & future assistive technologies.
+				Writing standards-compliant HTML.
+				ARIA roles & attributes
+				Compatibility with assistive technologies
+				Intro to screen readers(NVDA, VoiceOver)
+Accessibility Testing & Tools
+	• Automated tools — Axe, Lighthouse, WAVE
+		They help you identify common accessibility issues in code & UI.
+			Axe (Deque)
+				Brrowser extension & CI/CD integration
+				Detects issues like missing labels, low contrast content, incorrect ARIA usage.
+				Provide rule-based explanations aligned with WCAG.
+				Strength: Excellent for developer workflows & regression checks
+				Limitations: Cannont test udability or context-based issues.
+			Lighthouse(Chrome Devtools)
+				Built into Chrome
+				Accessibility scoring with suggestions
+				Covers semantic issues, contrast, names & roles.
+				Strength: Quick overview during development.
+				Limitation: Surface-level testing only.
+			WAVE(WebAIM)
+				Visual overlay highlighting accesibility issues.
+				Identifies structural errors, missing alt text, contrast problems.
+				Strength: Easy to undestand for non-developers
+				Limitation: Not suitable for automated pipelines.
+	• Manual testing checklist
+		Keyboard Testing
+		Visual & Cognitive Checks
+	• Accessibility audit approach
+		An accesibility audit is a systematic evaluation against WCAG success criteria.
+			Define Scope
+			Automated scan for baseline issues
+			Manual Evaluation
+			Assistive technology testing
+			Issue reporting
+			Retesting
+	• Common developer mistakes
+		Missing or incorrect labels
+		Overusing or misusing ARIA
+		Removing Focus Indicators
+		Relying on color alone
+		Inaccessible custom components
+		No Testing beyond automation
