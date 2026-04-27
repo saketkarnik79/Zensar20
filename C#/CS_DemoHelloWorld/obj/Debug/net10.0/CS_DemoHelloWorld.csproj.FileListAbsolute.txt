@@ -1,0 +1,15 @@
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\bin\Debug\net10.0\CS_DemoHelloWorld.exe
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\bin\Debug\net10.0\CS_DemoHelloWorld.deps.json
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\bin\Debug\net10.0\CS_DemoHelloWorld.runtimeconfig.json
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\bin\Debug\net10.0\CS_DemoHelloWorld.dll
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\bin\Debug\net10.0\CS_DemoHelloWorld.pdb
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\CS_DemoHelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\CS_DemoHelloWorld.AssemblyInfoInputs.cache
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\CS_DemoHelloWorld.AssemblyInfo.cs
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\CS_DemoHelloWorld.csproj.CoreCompileInputs.cache
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\CS_DemoHelloWorld.sourcelink.json
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\CS_DemoHelloWorld.dll
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\refint\CS_DemoHelloWorld.dll
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\CS_DemoHelloWorld.pdb
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\CS_DemoHelloWorld.genruntimeconfig.cache
+C:\ZensarDemos\Zensar20\C#\CS_DemoHelloWorld\obj\Debug\net10.0\ref\CS_DemoHelloWorld.dll

@@ -1,0 +1,109 @@
+Introduction to .NET & Environment
+	Microsoft already had Visual Basic, Visual C++ Visual InterDev, Visual Foxpro.
+	These all were based on old COM specification.
+	.NET Framework was always meant to be cross platform framework right from the beginning.
+	Microsoft took a step back and decided to make .NET Framework for Windows only.
+	What is .NET?
+		.NET is a free, open-source, cross-platform development framework created by Microsoft. It allows developers to build wide range of applications using multiple programming languages.
+		With .NET, you can create:
+			Console Applications.
+			Windows Desktop Applications.
+			Web Applications * Services/API
+			Mobile Apps
+			Cloud-Based & MicroServices solutions.
+		Why use .NET?
+			Key advantages of .NET framewor:
+				Language Independence
+				Cross-Platform
+				High Performance
+				Rich Standard Library
+				Strong Tooling Support
+				Security & Reliability
+	• Overview, history & ecosystem — .NET Framework vs .NET Core vs .NET 5+
+		Components of .NET
+			.NET Runtime (CLR/CoreCLR)
+				It is the execution engine of .NET. It:
+					Converts Intermediate Language to machine code using JIT compilers.
+					Auto manages  the meory using Garbage Collection.
+					Handles Exceptions
+					Provides security & type safety
+			.NET Class Library(Framework Class Library/ Base Class Library)
+				It is a collection of resusable classes, interfaces & APIs used for:
+					File Handling
+					Database Connectivity
+					Networking
+					Web Development
+					User Interfaces
+			Common Type System(CTS)
+				Common Language Specification (CLS)
+			JIT Compilers
+				Standard JIT Compiler
+				Econo JIT Compiler
+				Pre JIT Compiler
+			Languages supported by .NET officially:
+				C#
+				VB.NET
+				F#
+				C++
+				CLI
+				Powershell Script
+				All these languages compile into intermediate language(MSIL/CIL) & run on the CLR with the help of JIT compilers.
+			.NET Tooling
+				Development Environment(Visual Studio, Visual Studio Code)
+			.NET SDK
+				It includes:
+					Compilers
+					Libraries
+					CLI Tools(dotnet cli commands)
+	• Setting up Visual Studio
+		Select the following workloads:
+			ASP.NET & Web Development
+			Azure & AI Development
+			.NET Desktop Development
+			Data Storage & Processing
+What is a C# analyzer?
+	A c# analyzer is a tool that:
+		Examines your C# code while you type.
+		Detects code issues, bugs, performance problems & style violations.
+		Suggests fixes & best practices.
+Why use Analyzers?
+	Enforce coding standards.
+	Catch bugs early.
+	Improve performance.
+	Increase code quality.
+	Maintain consistency in teams.
+Types of C# Analyzers
+	Code Quality
+	Style Rules
+	Performance
+	Security
+Built-in .NET Analyzers(Default)
+Analyzer Rules (Needs to be enabled in .csproj)
+Code Style Analyzers
+
+
+Profiling & debugging
+	Common debugging scenarios
+		Null reference errors
+		Infinite loops
+		Incorrect conditions
+		Other Exceptiion
+		Exception Handling
+		Performance slowdowns
+	Best practices 
+		Use breakpoints instead of prints
+		Inspect variables before assumptions
+		Debug small blocks
+		Profile before optimizing
+		Remove unnecessary breakpoints before commit
+VS Code productivity tips
+	Keyboard Shortcuts
+	Use Fast Navigation
+	IntelliSense& Smart Editing
+	Multi-Cursor Editing
+	Code Formatting & Cleanup
+	Use extensions wisely
+	Multiple terminal tasks (Use split terminal)
+	Settings that improve Productivity
+	Use problems panel effectively
+	
