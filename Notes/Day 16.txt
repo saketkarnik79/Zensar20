@@ -1,0 +1,44 @@
+OOP Basics
+		• OOPS Concepts
+			What is an Object?
+				An Object is a real world entity that possess:
+					Unique Identity
+					Characteristics (Fields/Properties)
+					Responsibilities (Methods)
+					Behavior (Events)
+			What is Object Oriented Programming(OOP)?
+				The type of programming which deals entirely in objects.
+				OOP is a programming paradigm that organizes software design around objects.
+				Rather than focusing strictly on the logic of "how" to perform an action (procedural programming), OOP fucuses on "what" entity is being manipulated.
+		• Major Pillars of OOPS
+			Abstraction - The process of identifying and finalizing "what" is/are the minimum expected features from the objects.
+			Encapsulation - The process of hiding the details of the implementation.
+			Inheritance - The ability of an object to derive some or all characteristics, responsibilities, behaviors from another object using some relationship with the other object. (Types of relationships between the object - "is-a" relationship, "has-a" relationship)
+			Polymorphism - An ability of an object to respond/behave differently when the same message is recieved in different contexts.
+			
+			Add(2,3)
+			Add(2,3,4)
+			Add("Hello",World)
+			These Add methods are just overloaded not polymorphic as the message needed to invoke them is diffrent for each one of  them.
+			
+		• Value Types, Reference Types
+		• Enum, Struct
+			When to use struct?
+				Small data objects.
+				Represents a single value.
+				Immutable data structure.
+				Performance-critical code.
+				No inheritance needed.
+			When not to use struct?
+				Large objects.
+				Complex behaviors.
+				Mutable data.
+				Requires inheritance.
+				Shared state needed.
+				
+		• Classes & objects — properties & methods
+		• Inheritance & polymorphism
+		• Encapsulation & abstraction
+	Advanced OOP & Interfaces
+		• Abstract classes — interfaces & implementation
+		• Sealed Classes, Methods, Properties

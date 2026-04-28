@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar20\\C#\\CS_DemoOOP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C8682D82-C167-4E94-B4B8-18E8AEAFC220}|CS_DemoOOP\\CS_DemoOOP.csproj|c:\\zensardemos\\zensar20\\c#\\cs_demooop\\cs_demooop\\banking\\savingsaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8682D82-C167-4E94-B4B8-18E8AEAFC220}|CS_DemoOOP\\CS_DemoOOP.csproj|solutionrelative:cs_demooop\\banking\\savingsaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8682D82-C167-4E94-B4B8-18E8AEAFC220}|CS_DemoOOP\\CS_DemoOOP.csproj|c:\\zensardemos\\zensar20\\c#\\cs_demooop\\cs_demooop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8682D82-C167-4E94-B4B8-18E8AEAFC220}|CS_DemoOOP\\CS_DemoOOP.csproj|solutionrelative:cs_demooop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8682D82-C167-4E94-B4B8-18E8AEAFC220}|CS_DemoOOP\\CS_DemoOOP.csproj|c:\\zensardemos\\zensar20\\c#\\cs_demooop\\cs_demooop\\insurance\\iinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8682D82-C167-4E94-B4B8-18E8AEAFC220}|CS_DemoOOP\\CS_DemoOOP.csproj|solutionrelative:cs_demooop\\insurance\\iinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SavingsAccount.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\C#\\CS_DemoOOP\\CS_DemoOOP\\Banking\\SavingsAccount.cs",
+              "RelativeDocumentMoniker": "CS_DemoOOP\\Banking\\SavingsAccount.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\C#\\CS_DemoOOP\\CS_DemoOOP\\Banking\\SavingsAccount.cs",
+              "RelativeToolTip": "CS_DemoOOP\\Banking\\SavingsAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T11:08:19.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IInsurance.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\C#\\CS_DemoOOP\\CS_DemoOOP\\Insurance\\IInsurance.cs",
+              "RelativeDocumentMoniker": "CS_DemoOOP\\Insurance\\IInsurance.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\C#\\CS_DemoOOP\\CS_DemoOOP\\Insurance\\IInsurance.cs",
+              "RelativeToolTip": "CS_DemoOOP\\Insurance\\IInsurance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T11:07:24.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\C#\\CS_DemoOOP\\CS_DemoOOP\\Program.cs",
+              "RelativeDocumentMoniker": "CS_DemoOOP\\Program.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\C#\\CS_DemoOOP\\CS_DemoOOP\\Program.cs",
+              "RelativeToolTip": "CS_DemoOOP\\Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswDMAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:16:36.856Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

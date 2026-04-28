@@ -1,0 +1,15 @@
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\bin\Debug\net10.0\CS_DemoEnums.exe
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\bin\Debug\net10.0\CS_DemoEnums.deps.json
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\bin\Debug\net10.0\CS_DemoEnums.runtimeconfig.json
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\bin\Debug\net10.0\CS_DemoEnums.dll
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\bin\Debug\net10.0\CS_DemoEnums.pdb
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\CS_DemoEnums.GeneratedMSBuildEditorConfig.editorconfig
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\CS_DemoEnums.AssemblyInfoInputs.cache
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\CS_DemoEnums.AssemblyInfo.cs
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\CS_DemoEnums.csproj.CoreCompileInputs.cache
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\CS_DemoEnums.sourcelink.json
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\CS_DemoEnums.dll
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\refint\CS_DemoEnums.dll
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\CS_DemoEnums.pdb
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\CS_DemoEnums.genruntimeconfig.cache
+c:\ZensarDemos\Zensar20\C#\CS_DemoEnums\obj\Debug\net10.0\ref\CS_DemoEnums.dll
