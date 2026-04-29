@@ -1,0 +1,115 @@
+Advanced OOP
+	• Collections — List, Dictionary, etc.
+		What are collections?
+			A collection is a container that holds multiple hetereogenous objects in a single unit and are mutable & dynamic in nature. They simplifies the operations like adding, removing, searching, sorting, reversing.
+		.NET has two types of collections
+			Non-Generic Collections (System.Collections)
+				ArrayList (List of objects)
+				Stack (List of Objects with LIFO)
+				Queue (List of objects with FIFO)
+				HashTable (List of Key & Value Pairs)
+				SortedList (List of Key & Value Pairs (sorted by key))
+				BitArray
+				NameValueCollection
+				HybridDictionary
+			Generic Collections (System.Collections.Generic)
+				List<T>
+				Stack<T>
+				Queue<T>
+				Dictionary<TKey, TValue>
+				SortedDictionary<TKey, TValue>
+				LinkedList<T>
+				SortedList<TKey, TValue>
+				HashSet<T>
+				SortedSet<T>
+				ReadOnlyCollection<T>
+				ObservableCollection<T>
+LINQ intro & queries over collections
+	What LINQ is?
+		LINQ (Language Integrated Query) is a powerful feature in .NET that lets you write queries directly in C# or VB to work with different types of data in a consistent way. Instead of learning separate query languages for databases, XML, or collections, LINQ provides a unified syntax.
+		Important Points:
+			Integrated into C#
+			Works across the data sources consistently
+			Declarative style
+	LINQ query syntax
+		Query syntax(SQL-like)
+			var result = from num in numbers
+						 where num > 5
+						 orderby num
+						 select num;
+		Method syntax(Fluent API)
+			var result = numbers
+							.Where(num => num > 5)
+							.OrderBy(num);
+							
+	Best practices
+		Prefer method syntax in Production
+		Filter early, Project Early(Performance Rule)
+		Use Any() instead of Count() > 0
+		Understand Deferred Execution
+		Use ToList()/ToArray() Deliberately
+		Prefer strong Typing over Anonymous Types in APIs
+		Use Select only for transformation
+		Choose the Right Terminal Operator
+		Handle null safely
+		Use AsNoTracking() with EF for Read-Only queries
+		
+	Pitfalls
+		Multiple enumeration
+			var query = employees.Where(e => e.IsActive);
+			if (query.Any())
+			{
+				foreach (var e in query)
+					Console.WriteLine(e.Name);
+			}
+			var list = query.ToList();
+		Assuming LINQ is always In-Memory
+			.Where(e => SomeCustomMethod(e.Name))
+		Ignoring IQueryable vs IEnumerable
+		Using Single() Blindly
+		Overusing LINQ for complex Business Logic
+		Using LINQ inside Loops
+		GroupBy Memory Explosion
+		
+Entity Framework Core
+	EF Core introduction
+		What is EF Core?
+			EF Core is a modern, lightweight, open-source Object-Relational Mapper(ORM) for .NET build by Microsoft. It allows the developers to work with relational database using .NET objects instead of writing most SQL queries by hand.
+			It is a successor to Entity Framework 6 & is designed to be cross-platform, high-performance & cloud-ready.
+		Why EF Core?
+			EF Core simplifies the data access by:
+				Mapping database tables to .NET classes.
+				Automatically generating SQL queries.
+				Handling CRUD operations.
+				Supporting migrations for database schema changes.
+				Working across platforms.
+		Key concepts
+			DbContext
+			Entity
+			DbSet<T>
+			Migrations
+		Supported Databases
+			SQL Server
+			Oracle
+			MySQL
+			PostgreSQL
+			MariaDB
+			SQLite
+			In-Memory(For testing)
+			Some NoSQL Databases
+		Advantages of EF Core
+			Faster Development
+			Clean domain models
+			Automatic change tracking
+			Easy unit testing
+			Database-First Approach, Code-First Approach
+		When not to use EF Core?
+			Extremely performance-critical systems
+			Complex, hand-tuned SQL queries
+			Heavy reporting or batch processing
+		Typical use cases of EF Core
+			ASP.NET Core Web APIs
+			ASP.NET MVC Web Applications
+			Microservices Architecture
+			Cloud-based applications
+	CRUD operations
