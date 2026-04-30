@@ -1,0 +1,40 @@
+[
+  {
+    "ContainingType": "Web_DemoMinimalWebAPI.Program\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003CMain\u003Eb__1",
+    "RelativePath": "people",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Web_DemoMinimalWebAPI.Models.Person, Web_DemoMinimalWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetPeopleData"
+  },
+  {
+    "ContainingType": "Web_DemoMinimalWebAPI.Program\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003CMain\u003Eb__0",
+    "RelativePath": "weatherforecast",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Web_DemoMinimalWebAPI.WeatherForecast[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

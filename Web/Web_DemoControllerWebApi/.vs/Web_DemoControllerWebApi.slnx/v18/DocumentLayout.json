@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoControllerWebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F123D593-0FFB-48BA-A909-7606923D7E45}|Web_DemoControllerWebApi\\Web_DemoControllerWebApi.csproj|c:\\zensardemos\\zensar20\\web\\web_democontrollerwebapi\\web_democontrollerwebapi\\controllers\\peopleapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F123D593-0FFB-48BA-A909-7606923D7E45}|Web_DemoControllerWebApi\\Web_DemoControllerWebApi.csproj|solutionrelative:web_democontrollerwebapi\\controllers\\peopleapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F123D593-0FFB-48BA-A909-7606923D7E45}|Web_DemoControllerWebApi\\Web_DemoControllerWebApi.csproj|c:\\zensardemos\\zensar20\\web\\web_democontrollerwebapi\\web_democontrollerwebapi\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F123D593-0FFB-48BA-A909-7606923D7E45}|Web_DemoControllerWebApi\\Web_DemoControllerWebApi.csproj|solutionrelative:web_democontrollerwebapi\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F123D593-0FFB-48BA-A909-7606923D7E45}|Web_DemoControllerWebApi\\Web_DemoControllerWebApi.csproj|c:\\zensardemos\\zensar20\\web\\web_democontrollerwebapi\\web_democontrollerwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F123D593-0FFB-48BA-A909-7606923D7E45}|Web_DemoControllerWebApi\\Web_DemoControllerWebApi.csproj|solutionrelative:web_democontrollerwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PeopleApiController.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoControllerWebApi\\Web_DemoControllerWebApi\\Controllers\\PeopleApiController.cs",
+              "RelativeDocumentMoniker": "Web_DemoControllerWebApi\\Controllers\\PeopleApiController.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoControllerWebApi\\Web_DemoControllerWebApi\\Controllers\\PeopleApiController.cs",
+              "RelativeToolTip": "Web_DemoControllerWebApi\\Controllers\\PeopleApiController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAcwF8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T11:33:34.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoControllerWebApi\\Web_DemoControllerWebApi\\Models\\Person.cs",
+              "RelativeDocumentMoniker": "Web_DemoControllerWebApi\\Models\\Person.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoControllerWebApi\\Web_DemoControllerWebApi\\Models\\Person.cs",
+              "RelativeToolTip": "Web_DemoControllerWebApi\\Models\\Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T11:32:23.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoControllerWebApi\\Web_DemoControllerWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Web_DemoControllerWebApi\\Program.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoControllerWebApi\\Web_DemoControllerWebApi\\Program.cs",
+              "RelativeToolTip": "Web_DemoControllerWebApi\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwB4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T11:29:53.166Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 ﻿using CS_DemoEFCoreCodeFirst.Data;
 using CS_DemoEFCoreCodeFirst.Models;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace CS_DemoEFCoreCodeFirst
 {
@@ -62,8 +64,43 @@ namespace CS_DemoEFCoreCodeFirst
             }
             var product = new Product { Name = name, Price = price, Quantity = quantity };
             context.Products.Add(product);
-            context.SaveChanges();
-            Console.WriteLine("Product added successfully.");
+
+            try
+            {
+                //throw new DbUpdateConcurrencyException("Simulated concurrency exception for demonstration purposes.");
+                context.SaveChanges();
+                Console.WriteLine("Product added successfully.");
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                Console.WriteLine("A concurrency error occurred. Please try again.");
+                Console.WriteLine(ex.Message);
+            }
+            catch (DbUpdateException ex)
+            {
+                Console.WriteLine("An error occurred while saving the product. Please try again.");
+                Console.WriteLine(ex.Message);
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("A database error occurred. Please check your connection and try again.");
+                Console.WriteLine(ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine("An error occurred while adding the product. Please try again.");
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine("An unexpected error occurred. Please try again.");
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Add product operation completed.");
+                Console.WriteLine("Cleaning up...");
+            }
         }
 
         public static void ListProducts(AppDbContext context)

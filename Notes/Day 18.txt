@@ -1,0 +1,136 @@
+Data Access, LINQ, Entity Framework & Async Programming
+	Entity Framework Core
+		• Error handling 
+			EF Core errors typically happen due to:
+				Database constraint violations
+				Invalid Queries
+				Connection Issues
+				Concurrency Conflicts
+				Configuration or Mapping mistakes
+				
+			Coomon EF Core Exceptions
+				DbUpdateException
+				DbUpdateCocurrencyException
+				InvalidOperationException
+				SqlException
+			Best Practices for Error Handling
+				Catch EF Core-specific exceptions.
+				Use middleware for global handling.
+				Never expose raw DB errors.
+				Log errors centrally.
+		• Testing approaches
+			EF Core is designed with testability in mind.
+			Types of Tests
+				Unit Tests
+				Integration Tests
+				Repository Tests
+			Best Practices for Testing
+				Prefer SQLite In-Memory over EF In-Memory.
+				Separate business logic from EF Core.
+				Focus unit tests on logic, not DB.
+				Use integration tests for the real behavior.
+	Asynchronous Programming
+		• Async programming concepts — async/await keywords
+			Why Async Programming is Needed?
+				Traditional (synchronous) code blocks the calling thread while waiting for an operation to finish.
+					e.g. var data = DownloadData(); // Thread is blocked until done
+				This behavior becomes a problem when:
+					Calling I/O operations(HTTP, database, file access)
+					Building UI apps (freezing the UI thread)
+					Writing scalable web APIs (wasting threads while waiting)
+				Async programming allows threads to stay free while waiting, improving the responsiveness & scalability.
+				What are async & await?
+					async:
+						Marks a method as asynchronous.
+						Allows use of await keyword inside the method.
+						Changes how the method executes(non-blocking).
+					await:
+						Pauses method execution without blocking the thread.
+						Automatically resumes when the awaited task completes.
+					e.g.
+						public async Task DoWorkAsync()
+						{
+							await Task.Delay(1000); // Non-blocking wait
+							Console.WriteLine("Done");
+						}
+					e.g. 
+						public async Task<int> GetCountAsync()
+						{
+							await Task.Delay(500);
+							return 42;
+						}
+					e.g.
+						async void DoWork() // Can't be awaited, exceptions crash process
+					e.g.
+						public async Task<string> GetDataAsync()
+						{
+							using var client = new HttpClient();
+							return await client.GetStringAsync("https://example.com");
+						}
+		• Task-based Asynchronous Pattern (TAP)
+			What is TAP?
+				TAP is the standard asynchronous programming pattern in .NET which is based on:
+					Task
+					Task<TResult>
+					async/await
+			Why TAP exists?
+			
+			Core idea of TAP?
+				An async operation returns immediately with a Task object that represents ongoing work.
+				e.g. 
+					Task<int> task = GetDataAsync();
+					int result = await task;
+					
+					await Task.WhenAll(
+						DownloadAsync(),
+						SaveAsync(),
+						LogAsync()
+					);
+					
+					Task finished = await Task.WhenAny(task1, task2, task3);
+					
+		• Handling async exceptions
+			public async Task<int> GetDataAsync()
+			{
+				await Task.Delay(500);
+				throw new InvalidOperationException("Something went wrong");
+			}
+			
+			try
+			{
+				int result = await GetDataAsync();
+			}
+			catch (InvalidOperationException ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+			
+		• Best practices & pitfalls
+			DOs:
+				Use async "all the way"
+				Return Task or Task<T> (never void)
+				Name method with Async suffix
+				Use async only for I/O-bound work
+				Handle cancellation properly
+				Catch exception at boundaries
+				Use Tasl.WhenAll for paralle async operations
+				Preserve stack traces
+			Dont's
+				Blocking async code
+				Fire & Forget tasks
+				Async inside constructors
+				Using async for trivial tasks
+				Ingnoring ConfigureAwait in libraries
+					await SomeAsyncCall().ConfigureAwait(false);
+				Swallowing exceptions
+				Excessive Task.Run
+					await Task.Run(() => File.ReadAllText(path));
+			Design Checklist
+				Ask yourself:
+					Does this method need to be async?
+					Am I blocking anywhere?
+					Can exceptions escape naturally?
+					Is cancellation support?
+					Is async used end-to-end?
+					Are tasks composed properly?
+

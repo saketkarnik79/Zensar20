@@ -14,7 +14,10 @@ namespace CS_DemoEFCoreCodeFirst.Data
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EFCoreDemoDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
+            optionsBuilder.UseInMemoryDatabase("EFCoreDemoDb");
+
+            //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EFCoreDemoDb;Trusted_Connection=True;MultipleActiveResultSets=True;")
+            //    .LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Error);
         }
     }
 }
