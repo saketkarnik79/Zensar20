@@ -134,3 +134,34 @@ Data Access, LINQ, Entity Framework & Async Programming
 					Is async used end-to-end?
 					Are tasks composed properly?
 
+ASP.NET Core Fundamentals
+	• ASP.NET Core intro
+		What is ASP.NET Core?
+			It is a sub framework within .NET that helps us build web applications & services.
+			Types of applications supported by ASP.NET Core:
+				Static web sites
+				Razor Pages Apps
+				MVC
+				Web APIs
+				Miicroservices
+				Cloud-native & Containerzed applications.
+				Real-Time application(with SignalR)
+			Key features of ASP.NET Core
+				Cross-Platform
+				High Performance
+				Open Source
+				Modular Architecture
+				Built-in Dependency Injection
+				Unified Framework
+			Core Components
+				Kester Web Server
+				Middlware
+				Routing Engine
+				Configuration & Logging
+		Why learn ASP.NET Core?
+			Ideal for modern web & API development.
+			Strong integration with cloud platforms like Azure.
+			In-demand skill in enterprise & product development.
+			Excellent tooling support
+	• Middleware creation & configuration
+		

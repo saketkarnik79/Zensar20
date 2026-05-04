@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoWebAPIWithHC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B61C3E8-114F-2137-09AF-388F009E05B7}|Web_DemoWebAPIWithHC\\Web_DemoWebAPIWithHC.csproj|c:\\zensardemos\\zensar20\\web\\web_demowebapiwithhc\\web_demowebapiwithhc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0B61C3E8-114F-2137-09AF-388F009E05B7}|Web_DemoWebAPIWithHC\\Web_DemoWebAPIWithHC.csproj|solutionrelative:web_demowebapiwithhc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B61C3E8-114F-2137-09AF-388F009E05B7}|Web_DemoWebAPIWithHC\\Web_DemoWebAPIWithHC.csproj|c:\\zensardemos\\zensar20\\web\\web_demowebapiwithhc\\web_demowebapiwithhc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B61C3E8-114F-2137-09AF-388F009E05B7}|Web_DemoWebAPIWithHC\\Web_DemoWebAPIWithHC.csproj|solutionrelative:web_demowebapiwithhc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoWebAPIWithHC\\Web_DemoWebAPIWithHC\\appsettings.json",
+              "RelativeDocumentMoniker": "Web_DemoWebAPIWithHC\\appsettings.json",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoWebAPIWithHC\\Web_DemoWebAPIWithHC\\appsettings.json",
+              "RelativeToolTip": "Web_DemoWebAPIWithHC\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-04T10:15:22.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoWebAPIWithHC\\Web_DemoWebAPIWithHC\\Program.cs",
+              "RelativeDocumentMoniker": "Web_DemoWebAPIWithHC\\Program.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Web\\Web_DemoWebAPIWithHC\\Web_DemoWebAPIWithHC\\Program.cs",
+              "RelativeToolTip": "Web_DemoWebAPIWithHC\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAswDgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T09:57:51.055Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

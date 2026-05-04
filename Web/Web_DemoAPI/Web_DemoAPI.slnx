@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Web_DemoAPI.IntegrationTests/Web_DemoAPI.IntegrationTests.csproj" />
+  <Project Path="Web_DemoAPI.UnitTests/Web_DemoAPI.UnitTests.csproj" />
+  <Project Path="Web_DemoAPI/Web_DemoAPI.csproj" />
+</Solution>

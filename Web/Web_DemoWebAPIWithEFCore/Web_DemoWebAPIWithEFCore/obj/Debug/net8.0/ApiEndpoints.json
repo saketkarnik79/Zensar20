@@ -1,0 +1,102 @@
+[
+  {
+    "ContainingType": "Web_DemoWebAPIWithEFCore.Controllers.ProductsApiController",
+    "Method": "GetProducts",
+    "RelativePath": "api/ProductsApi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_DemoWebAPIWithEFCore.Controllers.ProductsApiController",
+    "Method": "PostProduct",
+    "RelativePath": "api/ProductsApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "Web_DemoWebAPIWithEFCore.Models.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_DemoWebAPIWithEFCore.Controllers.ProductsApiController",
+    "Method": "GetProduct",
+    "RelativePath": "api/ProductsApi/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_DemoWebAPIWithEFCore.Controllers.ProductsApiController",
+    "Method": "PutProduct",
+    "RelativePath": "api/ProductsApi/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "product",
+        "Type": "Web_DemoWebAPIWithEFCore.Models.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_DemoWebAPIWithEFCore.Controllers.ProductsApiController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/ProductsApi/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_DemoWebAPIWithEFCore.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Web_DemoWebAPIWithEFCore.WeatherForecast, Web_DemoWebAPIWithEFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
