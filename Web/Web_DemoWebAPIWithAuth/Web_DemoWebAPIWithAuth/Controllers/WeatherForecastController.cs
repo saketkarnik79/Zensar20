@@ -31,5 +31,20 @@ namespace Web_DemoWebAPIWithAuth.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("admin")]
+        [Authorize(Roles = "Admin")]
+        public IActionResult AdminOnly()
+        {
+            return Ok("This endpoint is accessible only to users with the Admin role.");
+        }
+
+        [HttpGet("reports")]
+        [Authorize(Policy = "CanViewReports")]
+        public IActionResult GetReports()
+        {
+            // This endpoint is accessible to any authenticated user
+            return Ok("This endpoint is accessible to user with CanViewReports permission.");
+        }
     }
 }

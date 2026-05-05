@@ -1,3 +1,85 @@
 Web APIs & Dependency Injection
 	• Testing approaches
+		Test Pyramid(Context)
+			E2E (End To End Testing) => Slow, Few
+			Integration Testing		 => Medium
+			Unit Testing			 => Fast, Many
+Testing & Debugging
+	• Error handling, logging best practices
+		Use Exception-Handling Middleware (UseExceptionHandler(), Custom Middleware, ProblemDetails for standadized errors)
+			app.UseExceptionHandler(errorApp =>
+			{
+				errorApp.Run(async context =>
+				{
+					context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+					context.Response.ContentType = "application/problem+json";
+
+					await context.Response.WriteAsJsonAsync(new ProblemDetails
+					{
+						Status = 500,
+						Title = "An unexpected error occurred",
+						Instance = context.TraceIdentifier
+					});
+				});
+			});
+		Use proper HTTP Status Code
+		Use ProblemDetails	
+			return Problem(
+				title: "Invalid input",
+				detail: "Email address is invalid",
+				statusCode: StatusCodes.Status400BadRequest);
+		Do not catch generic exceptions in Controllers
+			try
+			{
+				...
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.Message);
+			}
+		Create Custom Exception Types
+			public class OrderNotFoundException : Exception
+			{
+				public OrderNotFoundException(string id)
+					: base($"Order {id} not found") { }
+			}
 		
+			Map them centrally:
+				if (exception is OrderNotFoundException)
+				{
+					context.Response.StatusCode = 404;
+				}
+			Structured Logging and not justs strings
+				logger.LogError(ex,
+					$"Failed processing order {orderId} for user {userId}");
+			Log at the Right Level
+			Never log sensitive Data
+				"User email: {Email}", Mask(email)
+			Use correlation ids for distributed systems
+			Use middleware for request logging
+				app.UseSerilogRequestLogging();
+			Production vs Development behavior
+				if (app.Environment.IsDevelopment())
+				{
+					app.UseDeveloperExceptionPage();
+				}
+			Use a mature Logging Framework
+				Log.Logger = new LoggerConfiguration()
+					.Enrich.FromLogContext()
+					.WriteTo.Console()
+					.WriteTo.File("logs/api.log")
+					.CreateLogger();
+			Measure logging noise
+			Test your error handling
+				response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+			Keep your response client-friendly
+ASP.NET Core WebAPI — Deep Dive
+	• Health checks, metrics & tracing basics
+	• Configuration, secrets & environments
+		Configuration Priority
+			Highest → Lowest priority:
+				Command-line args
+				Environment variables
+				User Secrets (dev)
+				appsettings.{Environment}.json
+				appsettings.json

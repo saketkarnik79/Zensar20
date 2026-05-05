@@ -1,0 +1,152 @@
+Authentication & Authorization with JWT
+	• Security, resilience & observability considerations
+		Security Considerations
+			Authentication & Token Security
+				Access Tokens
+					Short-lived( 5-15 minutes)
+					Never store in localstorage due to potential XSS risk
+					Prefer in-memory or secure cookie (httpOnly)
+				Refresh Tokens
+					Long-lived(7-30 days)
+					Stored in hashed format (SHA256 or better)
+					Rotate on every use
+					One refresh token per devie/session
+			JWT Hardening
+				Enforce strong validation
+					Validate Issuer
+					Validate audience
+					Validate Signing Key
+					Set clockskew = Timespan.Zero
+				Avoid Sensitive Data in JWT
+					Keep JWT small & minimal
+			Authorization Safety
+				Prefer policies over Roles alone
+				Defense in-depth
+					Controller-level
+					Service-level checks for critical actions
+					Never trust client claims blindly for business logic
+			Input & API Security
+				Model validations
+				Use DTOs, never expose EF entities
+				Validate enums & ranges
+				JSON size limits
+			Transport & Infrastructure Security
+				HTTPS only (with HSTS enabled)
+				TLS 1.2+
+				Secure Headers
+				Secrets in Key Vault/Environment Variables
+				No secrets in appsettings.json
+			Abuse Prevention
+				Rate limitting
+				Account locout after failed logins
+				CAPTCHA for public endpoints
+				IP reputation checks
+		Resilience Considerations
+			Resilience = Graceful Failure, not just uptime.
+			Failure modes you must expect:
+				DB Unavailable
+				Redis Down
+				Identity provider down
+				Partial outage
+			Retry, Timeout & Circuit Breakers
+				Use timeouts by default
+				Retry only safe/idempotent calls
+				Circuit breaker for downstream services
+			Token Strategy & Resilience
+				JWT access tokens allow:
+					API calls even if auth DB is temporarily down
+					Stateless scaling
+				Refresh endpoints are llowed to fail gracefully:
+					Client retries later
+					User is not forcibly logged out immediately:
+				Idempotency
+					Logout, refresh, revoke should be idempotent
+						Mutiple calls -> same result
+						Avoids race conditions
+				Graceful Degradation
+					It reports service is down -> show partial response
+					If analytics available -> core APIs still work
+					Avoid "all or nothing" dependencies
+				Scalability & Availability
+					Stateless APIs (JWT Helps)
+					Horizontal scaling
+					Sticky sessions not required
+					Read/Write separation for auth stores if needed
+		Observability Considerations
+			Three pillars:
+				Logs
+				Metrics
+				Traces
+			Logging (Security-Aware Logging)
+				Alaways Log:
+					Failed Login Attempts
+					Refresh token reuse attempts
+					Token revocation
+					Authorization failures(403)
+					Unusual acces patterns
+				Never Log:
+					Tokens (access or refresh)
+					Passwords
+					Secrets
+					PII
+			Structured Logging
+			Metrics to Capture
+				Security metrics
+					Login failure rate
+					Refresh token reuse attempts
+					401 vs 403 ratio
+					Token revocations
+				System metrics
+					Request Latency
+					Error rate
+					Dependency Failures
+					CPU/Memory/Storage
+			Distributed Tracing
+				Trace requests across system
+				Helps debug:
+					Slow refresh token flows
+					Authorization latency
+					Downstream bottlenecks
+			Alerts
+
+gRPC in ASP.NET Core
+	• What is gRPC?
+		gRPC is a high-performance, open-source RPC framework developed by Google which allows applications to communicate with each other efficiently.
+		In simple terms:
+			Instead of:
+				sending raw HTTP requests
+				manually serializing JSON
+				parsing responses
+			With gRPC, you can do foolowing:
+				Define a service contract
+				Generate strongly-typed client & server code
+				Call methods directly
+				Get fast, compact, binary communication
+		Key building blocks of gRPC
+			Protobuf (Protocol Buffers)
+				gRPC uses protobuf (.proto files) as:
+					Interface Definition Language(IDL)
+					Message serialization format
+					
+						syntax = "proto3";
+
+						service UserService {
+						  rpc GetUser (UserRequest) returns (UserResponse);
+						}
+
+						message UserRequest {
+						  int32 id = 1;
+						}
+
+						message UserResponse {
+						  int32 id = 1;
+						  string name = 2;
+						}
+			Strongly typed RPC Communication
+			HTTP/2 under the hood
+		gRPC communication types
+			Unary (Request->Response)
+			Server Streaming(Request->Stream of Response)
+			Client Streaming(Stream of request ->Response)
+			Bidirectional streaming (Streams both ways)
+		API Gateway → Order Service → Payment Service → Inventory Service	

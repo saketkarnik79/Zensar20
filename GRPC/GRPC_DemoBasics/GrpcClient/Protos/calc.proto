@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcClient.Protos";
+
+// The request message containing the 2 numbers
+message CalcRequest {
+  int32 num1 = 1;
+  int32 num2 = 2;
+}
+
+// The response message containing the result.
+message CalcReply {
+  int32 result = 1;
+}
+
+// The calculator service definition.
+service Calc {
+  // Adds two numbers
+  rpc Add (CalcRequest) returns (CalcReply);
+  // Subtracts two numbers
+  //rpc Subtract (CalcRequest) returns (CalcReply);
+  // Multiplies two numbers
+  //rpc Multiply (CalcRequest) returns (CalcReply);
+  // Divides two numbers
+  //rpc Divide (CalcRequest) returns (CalcReply);
+}

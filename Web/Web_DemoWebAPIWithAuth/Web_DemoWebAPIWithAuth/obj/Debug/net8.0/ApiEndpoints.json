@@ -16,6 +16,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web_DemoWebAPIWithAuth.Controllers.AuthApiController",
+    "Method": "Logout",
+    "RelativePath": "api/AuthApi/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Web_DemoWebAPIWithAuth.Models.LogoutRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_DemoWebAPIWithAuth.Controllers.AuthApiController",
+    "Method": "LogoutAllDevices",
+    "RelativePath": "api/AuthApi/logoutalldevices",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_DemoWebAPIWithAuth.Controllers.AuthApiController",
+    "Method": "Refresh",
+    "RelativePath": "api/AuthApi/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshToken",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_DemoWebAPIWithAuth.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
@@ -35,5 +83,25 @@
       }
     ],
     "EndpointName": "GetWeatherForecast"
+  },
+  {
+    "ContainingType": "Web_DemoWebAPIWithAuth.Controllers.WeatherForecastController",
+    "Method": "AdminOnly",
+    "RelativePath": "WeatherForecast/admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_DemoWebAPIWithAuth.Controllers.WeatherForecastController",
+    "Method": "GetReports",
+    "RelativePath": "WeatherForecast/reports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

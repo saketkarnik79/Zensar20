@@ -74,7 +74,19 @@ namespace Web_DemoWebAPIWithAuth
                     ClockSkew = TimeSpan.Zero
                 };
             });
-            builder.Services.AddAuthorization();
+            //builder.Services.AddAuthorization();
+            // Add authorization policies if needed
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+                // Add more policies as needed
+                options.AddPolicy("CanViewReports", policy=> policy.RequireClaim("Permission", "CanViewReports"));
+
+                options.AddPolicy("AdminWithReportsAccess", policy =>
+                    policy.RequireAssertion(context =>
+                        context.User.IsInRole("Admin") && context.User.HasClaim(c => c.Type == "Permission" && c.Value == "CanViewReports")
+                    ));
+            });
 
             var app = builder.Build();
 
