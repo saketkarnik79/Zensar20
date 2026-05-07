@@ -1,0 +1,85 @@
+Introduction to Azure Development
+	• What is Cloud Computing?
+		Cloud computing is the delivery of computing services - such as servers, storage, databases, networking, software, and analytics - over the internet ("the cloud") instead of using local computers or physical servers.
+		Key Features:
+			On-Demand Access
+			Scalability
+			Pay-As-You-Go
+			Remote access
+		Types of Cloud
+			Public Cloud
+			Private Cloud
+			Hybrid Cloud
+		Cloud Service Models
+			IaaS - Infrastructure as a Service
+			PaaS - Platform as a Service
+			SaaS - Software as a Service
+	• Overview of Microsoft Azure services
+		Compute categories
+			Virtual Machines(VMs)
+			Azure App Service
+			Azure Kubernetes Service(AKS)
+			Azure Functions
+		Storage Services
+			Azure Blob Storage
+			Azure Disk Storage
+			Azure File Storage
+			Azure Queue Storage
+		Networking Services
+			Virtual Network(vNet)
+			Azure Load Balancer
+			Azure Application Gateway
+			Azure VPN Gateway
+			Azure DNS
+		Database Services
+			Azure Sql Database
+			Azure CosmosDB
+			Azure Database for MySQL/PostgreSQL
+			Azure Synapse Analytics
+		AI & Machine Learning
+			Azure Machine Learning
+			Azure Cognitive Services
+			Azure OpenAI Service
+		Security & Identity
+			Azure Active Directory (Azure Entra ID)
+			Azure Security Center
+			Azure Key Vault
+			Azure Defender
+		DevOps& Developer Tools
+			Azure DevOps
+			GitHub(Integrted with Azure)
+			Azure DevTest Labs
+		Analytics & Big Data
+			Azure Data Factory
+			Azure Databricks
+			Azure Stream Analytics
+			Power BI
+		Internet Of Things(IoT)
+			Azure IoT Hub
+			Azure IoT Central
+			Azure Digital Twins
+		Migration & Hybrid Cloud
+			Azure Migrate
+			Azure Arc
+			Azure Stack (Private Cloud)
+	• AZ-204 exam structure & expectations
+		Basic Format
+			Exam Name: Developing Solutions for Microsoft Azure
+			Duration: 120 Minutes
+			Questions: ~40 - 60
+			Passing Score: 700/1000
+			Cost: ~$165 USD
+		Question Types
+			Multiple-choice (single & multiple answer)
+			Drag-and-drop questions/ordering
+			Case Studies(Can't be revisit)
+			Code-based questions
+			Scenario-based design questions
+		Exam Domains(Weightage)
+			Develop Azure Compute Solutions			-> 25-30%
+			Develop for Azure Storage				-> 15-20%
+			Implement Azure Security				-> 20-25%
+			Monitor, troubleshoot, optimize			-> 15-20%
+			Connect to & consume Azure Services		-> 15-20%
+	• Setting up Azure account & dev environment
+	• Azure CLI & Portal walkthrough

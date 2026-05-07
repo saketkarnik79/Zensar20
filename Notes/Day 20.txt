@@ -150,3 +150,47 @@ gRPC in ASP.NET Core
 			Client Streaming(Stream of request ->Response)
 			Bidirectional streaming (Streams both ways)
 		API Gateway → Order Service → Payment Service → Inventory Service	
+
+Microservices & Messaging
+	• Microservices principles & communication patterns (sync vs async)
+		What is Microservices Architecture?
+			It is a way of building software as a set of small, independent services, where:
+				Each service owns one business capability.
+				Services are independently developed, deployed & scaled.
+				Service communicate over well-defined APIs(HTTP/gRPC/events)
+		Before MicroServices Architecture we had Monolith Architecture
+		Key principles of Microservices
+			Single Responsibility Principle(Business Capability)
+				Order Service		-> Order Lifecycle
+				Product Service		-> Product Lifecycle
+				Payment Service		-> Payment Processing
+				User Service		-> User Profile & Identity
+			Database per services
+			Independent Deployment
+			Decentralized Communication
+		API Gateway
+			Responsibilities
+				Routing
+				Request Aggregation
+				Rate Limiting
+				Auth
+				TLS Termination
+		Security In Microservices
+			External security at Gateway
+			Internal service-to-service security
+			Zero Trust Principles
+		Communication Patterns
+			REST
+			gRPC
+			Event Driven(Asynchronous Communication)
+		Challenges with Microservices Architecture
+			Complexity Increases
+				Data Consistency
+				Network Failures
+				Distributed tracing
+				Deployment Orchestration
+			Needs strong DevOps
+				CI/CD
+				Containers
+				Observability
+				Automation
