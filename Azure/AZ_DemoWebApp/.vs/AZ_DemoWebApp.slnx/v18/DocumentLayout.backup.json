@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3F387CCE-CF09-49C7-B7F1-F3C2460FDF90}|AZ_DemoWebApp\\AZ_DemoWebApp.csproj|c:\\zensardemos\\zensar20\\azure\\az_demowebapp\\az_demowebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3F387CCE-CF09-49C7-B7F1-F3C2460FDF90}|AZ_DemoWebApp\\AZ_DemoWebApp.csproj|solutionrelative:az_demowebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F387CCE-CF09-49C7-B7F1-F3C2460FDF90}|AZ_DemoWebApp\\AZ_DemoWebApp.csproj|c:\\zensardemos\\zensar20\\azure\\az_demowebapp\\az_demowebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F387CCE-CF09-49C7-B7F1-F3C2460FDF90}|AZ_DemoWebApp\\AZ_DemoWebApp.csproj|solutionrelative:az_demowebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoWebApp\\AZ_DemoWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AZ_DemoWebApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoWebApp\\AZ_DemoWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AZ_DemoWebApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-08T07:06:55.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoWebApp\\AZ_DemoWebApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "AZ_DemoWebApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoWebApp\\AZ_DemoWebApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "AZ_DemoWebApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:06:13.253Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

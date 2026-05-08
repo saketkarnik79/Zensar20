@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar20\\Azure\\ZenDemoFuncApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5DADEEE9-07F6-4D09-89D9-F81C95EA14D6}|ZenDemoFuncApp\\ZenDemoFuncApp.csproj|c:\\zensardemos\\zensar20\\azure\\zendemofuncapp\\zendemofuncapp\\myhttpfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DADEEE9-07F6-4D09-89D9-F81C95EA14D6}|ZenDemoFuncApp\\ZenDemoFuncApp.csproj|solutionrelative:zendemofuncapp\\myhttpfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyHttpFunction.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Azure\\ZenDemoFuncApp\\ZenDemoFuncApp\\MyHttpFunction.cs",
+              "RelativeDocumentMoniker": "ZenDemoFuncApp\\MyHttpFunction.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Azure\\ZenDemoFuncApp\\ZenDemoFuncApp\\MyHttpFunction.cs",
+              "RelativeToolTip": "ZenDemoFuncApp\\MyHttpFunction.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T10:31:50.212Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+C:\ZensarDemos\Zensar20\Azure\AZ_DemoWebApp\AZ_DemoWebApp\obj\Release\net8.0\PubTmp\Out\AZ_DemoWebApp.exe
+C:\ZensarDemos\Zensar20\Azure\AZ_DemoWebApp\AZ_DemoWebApp\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\ZensarDemos\Zensar20\Azure\AZ_DemoWebApp\AZ_DemoWebApp\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\ZensarDemos\Zensar20\Azure\AZ_DemoWebApp\AZ_DemoWebApp\obj\Release\net8.0\PubTmp\Out\dotnet-tools.json
+C:\ZensarDemos\Zensar20\Azure\AZ_DemoWebApp\AZ_DemoWebApp\obj\Release\net8.0\PubTmp\Out\AZ_DemoWebApp.dll
+C:\ZensarDemos\Zensar20\Azure\AZ_DemoWebApp\AZ_DemoWebApp\obj\Release\net8.0\PubTmp\Out\AZ_DemoWebApp.deps.json
+C:\ZensarDemos\Zensar20\Azure\AZ_DemoWebApp\AZ_DemoWebApp\obj\Release\net8.0\PubTmp\Out\AZ_DemoWebApp.runtimeconfig.json
+C:\ZensarDemos\Zensar20\Azure\AZ_DemoWebApp\AZ_DemoWebApp\obj\Release\net8.0\PubTmp\Out\AZ_DemoWebApp.pdb

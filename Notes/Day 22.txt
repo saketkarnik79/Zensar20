@@ -1,0 +1,94 @@
+Azure function is event-driven serverless compute service where:
+	You write small pieces of code.
+	Azure platform handles:
+		Infrastructure
+		Scaling
+		Exceution
+	You pay only when the code actually runs (Consumption Plans).
+Function Triggers
+	Triggers define how a function starts execution
+		Http Trigger
+		Timer Trigger
+		Queue Trigger
+		Blob Trigger
+		Service Bus Trigger
+		Event Hub Trigger
+		Event Grid Triigers
+		CosmosDB Trigger
+		Many More		
+Bindings(Input & Output Handling)
+	Bindings simplify integration -> no need to write boilerplate code.
+	
+	Examples:
+		Trigger			Input			Ouput
+		HTTP			Request			Response, Queue
+		Blob			File Content	CosmosDB
+		Queue			Message			API response
+	
+	Binding configurations are done using function.json
+		{
+		  "bindings": [
+			{
+			  "type": "httpTrigger",
+			  "direction": "in",
+			  "name": "req"
+			},
+			{
+			  "type": "queue",
+			  "direction": "out",
+			  "name": "outputQueueItem"
+			}
+		  ]
+		}
+Durable Functions
+
+Hosting & Scaling
+	Multiple hosting models supported
+		Consumption Plan
+			Auto-scale
+			Pay-per-execution
+			Best for spradic workloads
+		Premium Plan
+			Pre-warmed instances
+			More control
+			VNET Integration
+			Auto-scale + always-ready instances
+		Dedicated Plan(App service plan)
+
+Azure Storage Service
+	Azure storage is Microsoft's cloud-based storage that allows you to store, manage, and access data over the internet. It is designed to be highly scalable, secure, durable, and available, making it suitable for everything from small apps to complex enterprise systems.
+	Key Feratures
+		Scalability
+		Durability & Availability
+		Security
+		Accessibility
+		Cost-Effective
+	Types of Azure Storage
+		BLOB Storage
+		File Storage
+		Queue Storage
+		Table Storage
+		Disk Storage
+	Redundancy Options
+		LRS - Within one data center
+		ZRS - Across Availability Zones
+		GRS - Secondary Region Replication
+		GZRS - Combines zoe & geo-redundancy
+	Access Tiers
+		Hot - Frequently accessed data
+		Cool - Infrequently accessed data
+		Archive - Rarely accessed 
+	Security Features
+		Data at rest & in transit is always encrypted
+		SAS for controlled access
+		RBAC
+		Private endpoints & firewalls
+	BLOB Storage
+		Core Components
+			Storage account
+			Container
+			BLOB
+		Types of BLOBS
+			Block BLOBS
+			Append BLOBS
+			Page BLOBS
