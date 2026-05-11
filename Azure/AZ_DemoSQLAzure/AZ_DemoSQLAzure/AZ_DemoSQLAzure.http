@@ -1,0 +1,6 @@
+@AZ_DemoSQLAzure_HostAddress = http://localhost:5196
+
+GET {{AZ_DemoSQLAzure_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

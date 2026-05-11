@@ -1,0 +1,66 @@
+What is Azure queue storage?
+	It is a service for storing large numbers of messages that can be accessed from anywhere via http/https & is mainly used to enable asynchronou communication between different parts of an application.
+Overview of Azure Cosmos DB
+	What is Azure Cosmos DB?
+		It is a fully managed NoSQL multi-model database service from Microsoft Azure designed for high performance, global distribution & massive scalability.
+		Key Features
+			Global Distribution
+			Multi-model Support
+				Cosmos DB supports multiple data models:
+					API						Descriptions
+					NoSQL (Core API)		JSON Document Database
+					MongoDB API				Compatible with MongoDB
+					Cassandra API			Column-family model
+					Table API				Key-value(like Azure Table Storage)
+					Gremlin					Graph Database
+					PostgreSQL
+			Schema less
+			High Performance
+			Automatic Scaling
+			High Availability
+		Core concepts
+			Container
+			Item
+			Partition Key
+			Request Units(RU/s)
+			Consistency Levels
+				Strong
+				Bounded Staleness
+				Session
+				Consistent Prefix
+				Eventual
+Azure SQL
+	What is Azure SQL?
+		It is Microsoft's fully managed relational database service in the cloud, based on the SQL Server engine. It is designed to store, manage, and query structured data using SQL.
+	Types of Azure SQL
+		Azure SQL Database
+			Fully Managed (PaaS)
+			Best for modern cloud apps
+			No server management needed
+		Azure SQL Managed Instance
+			Near 100% SQL Server Comnpatibility
+			Good for migrating existing apps
+		SQL Server on Azure Virtual Machines
+			Full Control (IaaS)
+			You manage OS, patches, etc.
+	Key Features
+		Fully Managed
+			Automatic Backups
+			Patching & update handled by Azure
+		High Availability
+			Built-in replication
+			99.99% uptime SLA
+		Scalability
+			Scale compute & storage easily
+			Vertical & Horizontal scaling
+		Security
+			Azure Entra ID
+			Firewall & Threat Detection
+			Encryption at rest & in transit
+		Performance Intelligence
+			Automatic tuning
+			Query performance insights
+	Core Concepts
+		Database
+		Tables
+		SQL Queries

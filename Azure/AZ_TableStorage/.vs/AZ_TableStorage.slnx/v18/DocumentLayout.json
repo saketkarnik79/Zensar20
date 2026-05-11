@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_TableStorage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D790CE63-F0A4-4921-81AD-9A4728C5031D}|AZ_TableStorage\\AZ_TableStorage.csproj|c:\\zensardemos\\zensar20\\azure\\az_tablestorage\\az_tablestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D790CE63-F0A4-4921-81AD-9A4728C5031D}|AZ_TableStorage\\AZ_TableStorage.csproj|solutionrelative:az_tablestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D790CE63-F0A4-4921-81AD-9A4728C5031D}|AZ_TableStorage\\AZ_TableStorage.csproj|c:\\zensardemos\\zensar20\\azure\\az_tablestorage\\az_tablestorage\\data\\tablestorageops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D790CE63-F0A4-4921-81AD-9A4728C5031D}|AZ_TableStorage\\AZ_TableStorage.csproj|solutionrelative:az_tablestorage\\data\\tablestorageops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TableStorageOps.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_TableStorage\\AZ_TableStorage\\Data\\TableStorageOps.cs",
+              "RelativeDocumentMoniker": "AZ_TableStorage\\Data\\TableStorageOps.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_TableStorage\\AZ_TableStorage\\Data\\TableStorageOps.cs",
+              "RelativeToolTip": "AZ_TableStorage\\Data\\TableStorageOps.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAUwDkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T05:35:36.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_TableStorage\\AZ_TableStorage\\Program.cs",
+              "RelativeDocumentMoniker": "AZ_TableStorage\\Program.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_TableStorage\\AZ_TableStorage\\Program.cs",
+              "RelativeToolTip": "AZ_TableStorage\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T05:30:15.893Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

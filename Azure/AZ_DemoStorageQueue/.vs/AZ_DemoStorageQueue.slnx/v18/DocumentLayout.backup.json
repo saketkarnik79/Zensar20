@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoStorageQueue\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{86FB68F6-303B-4F37-A7ED-2C99D76262AE}|AZ_DemoStorageQueue\\AZ_DemoStorageQueue.csproj|c:\\zensardemos\\zensar20\\azure\\az_demostoragequeue\\az_demostoragequeue\\queing\\queuestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FB68F6-303B-4F37-A7ED-2C99D76262AE}|AZ_DemoStorageQueue\\AZ_DemoStorageQueue.csproj|solutionrelative:az_demostoragequeue\\queing\\queuestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86FB68F6-303B-4F37-A7ED-2C99D76262AE}|AZ_DemoStorageQueue\\AZ_DemoStorageQueue.csproj|c:\\zensardemos\\zensar20\\azure\\az_demostoragequeue\\az_demostoragequeue\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FB68F6-303B-4F37-A7ED-2C99D76262AE}|AZ_DemoStorageQueue\\AZ_DemoStorageQueue.csproj|solutionrelative:az_demostoragequeue\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QueueStorageService.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoStorageQueue\\AZ_DemoStorageQueue\\Queing\\QueueStorageService.cs",
+              "RelativeDocumentMoniker": "AZ_DemoStorageQueue\\Queing\\QueueStorageService.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoStorageQueue\\AZ_DemoStorageQueue\\Queing\\QueueStorageService.cs",
+              "RelativeToolTip": "AZ_DemoStorageQueue\\Queing\\QueueStorageService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T06:35:46.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoStorageQueue\\AZ_DemoStorageQueue\\Program.cs",
+              "RelativeDocumentMoniker": "AZ_DemoStorageQueue\\Program.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar20\\Azure\\AZ_DemoStorageQueue\\AZ_DemoStorageQueue\\Program.cs",
+              "RelativeToolTip": "AZ_DemoStorageQueue\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T06:34:16.131Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
