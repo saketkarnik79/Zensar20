@@ -1,0 +1,20 @@
+[
+  {
+    "name": "ProcessOrderEvent",
+    "scriptFile": "AZ_DemoEGFuncApp.dll",
+    "entryPoint": "AZ_DemoEGFuncApp.ProcessOrderEvent.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "evt",
+        "direction": "In",
+        "type": "eventGridTrigger",
+        "cardinality": "One",
+        "properties": {}
+      }
+    ]
+  }
+]
